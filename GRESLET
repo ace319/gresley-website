@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Who Is George Smith? | GRESLEY</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(to right, #1f1f1f, #3a2f2f);
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #ddd;
+    }
+
+    nav {
+      background: #000;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #f5f5f5;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 50px 20px;
+    }
+
+    h2 {
+      color: #d6a15d;
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .card {
+      background: #1c1c1c;
+      padding: 25px;
+      border-radius: 12px;
+      margin-top: 20px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    footer {
+      background: #000;
+      text-align: center;
+      padding: 25px;
+      color: #aaa;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>GRESLEY</h1>
+    <p>The solo project of George Smith from New Hope Club</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#newhopeclub">New Hope Club</a>
+    <a href="#solo">Solo Career</a>
+    <a href="#music">Music</a>
+  </nav>
+
+  <section id="about">
+    <h2>Who Is George Smith?</h2>
+    <div class="card">
+      <p>
+        George Smith is a British singer, guitarist, pianist, and songwriter best known
+        as one third of the pop band New Hope Club. Alongside Blake Richardson and
+        Reece Bibby, George helped build New Hope Club into a fan-loved pop group
+        known for bright melodies, strong harmonies, and heartfelt songwriting.
+      </p>
+
+      <p>
+        After New Hope Club went on hiatus, George began a new chapter as a solo
+        artist under the name <strong>GRESLEY</strong>. His solo music shows a more personal,
+        emotional, and reflective side of his songwriting.
+      </p>
+    </div>
+  </section>
+
+  <section id="newhopeclub">
+    <h2>George Smith and New Hope Club</h2>
+    <div class="card">
+      <p>
+        New Hope Club formed in 2015 and became known for their pop-rock sound,
+        acoustic-driven performances, and close connection with fans. George contributed
+        vocals, guitar, and piano to the band.
+      </p>
+
+      <ul>
+        <li>Band members: George Smith, Blake Richardson, and Reece Bibby</li>
+        <li>Formed in 2015</li>
+        <li>Known for pop and pop-rock music</li>
+        <li>Released the debut album <em>New Hope Club</em> in 2020</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="solo">
+    <h2>The GRESLEY Era</h2>
+    <div class="card">
+      <p>
+        As GRESLEY, George Smith has stepped into a more vulnerable solo identity.
+        His songs focus on growing up, heartbreak, change, distance, love, and finding
+        himself after years in a band.
+      </p>
+
+      <p>
+        The GRESLEY project feels more intimate and personal, giving fans a closer look
+        at George as both a songwriter and an artist.
+      </p>
+    </div>
+  </section>
+
+  <section id="music">
+    <h2>Music Style</h2>
+    <div class="card">
+      <p>
+        GRESLEY’s music blends emotional pop songwriting with acoustic textures,
+        personal lyrics, and a softer singer-songwriter feel. While New Hope Club leaned
+        into polished pop-rock energy, GRESLEY gives George room to tell his own story
+        in a more honest and direct way.
+      </p>
+
+      <ul>
+        <li>Emotional songwriting</li>
+        <li>Acoustic and pop influences</li>
+        <li>Personal lyrics</li>
+        <li>A more mature solo sound</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <p>Fan-made page about George Smith / GRESLEY</p>
+  </footer>
+
+</body>
+</html>
