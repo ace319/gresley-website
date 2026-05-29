@@ -36,17 +36,19 @@
       text-align: center;
       position: sticky;
       top: 0;
+      z-index: 10;
     }
 
     nav a {
       color: #f5f5f5;
-      margin: 0 10px;
+      margin: 0 8px;
       text-decoration: none;
       font-weight: bold;
+      font-size: 0.95rem;
     }
 
     section {
-      max-width: 900px;
+      max-width: 950px;
       margin: auto;
       padding: 50px 20px;
     }
@@ -72,6 +74,40 @@
       margin-top: 20px;
     }
 
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 15px;
+    }
+
+    .stat-box {
+      background: #252525;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .stat-box strong {
+      display: block;
+      font-size: 2rem;
+      color: #d6a15d;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+    }
+
+    .gallery-box {
+      background: #252525;
+      border: 1px dashed #777;
+      border-radius: 10px;
+      padding: 40px 15px;
+      text-align: center;
+      color: #bbb;
+    }
+
     footer {
       background: #000;
       text-align: center;
@@ -92,6 +128,9 @@
     <a href="#about">About</a>
     <a href="#newhopeclub">New Hope Club</a>
     <a href="#album">Album</a>
+    <a href="#songguide">Songs</a>
+    <a href="#stats">Stats</a>
+    <a href="#timeline">Timeline</a>
     <a href="#shows">Shows</a>
     <a href="#upcoming">Upcoming</a>
     <a href="#links">Links</a>
@@ -125,6 +164,19 @@
     </div>
   </section>
 
+  <section id="news">
+    <h2>Latest News</h2>
+
+    <div class="card">
+      <ul>
+        <li><strong>June 12, 2026</strong> — GRESLEY performs at El Cid in Los Angeles with Tor Miller.</li>
+        <li><strong>May 2026</strong> — GRESLEY completed his first UK and Ireland solo run.</li>
+        <li><strong>April 25, 2026</strong> — GRESLEY played his first small live set / soft launch in Los Angeles.</li>
+        <li><strong>April 24, 2026</strong> — Debut album <em>Songs I Wrote Since She Left</em> was released.</li>
+      </ul>
+    </div>
+  </section>
+
   <section id="album">
     <h2>Debut Album</h2>
 
@@ -148,6 +200,165 @@
         <li>Missing You Already</li>
         <li>The Boys</li>
       </ol>
+    </div>
+  </section>
+
+  <section id="songguide">
+    <h2>Song-by-Song Album Guide</h2>
+
+    <div class="card">
+      <h3>Think of You</h3>
+      <p>One of the album’s emotional centerpieces and a regular part of the live set.</p>
+
+      <h3>Babyface</h3>
+      <p>A live favorite from the first UK and Ireland shows.</p>
+
+      <h3>How?</h3>
+      <p>A key GRESLEY song that has opened every full solo set so far.</p>
+
+      <h3>Piece of Your Love</h3>
+      <p>A major live closer and one of the most performed songs in the early GRESLEY era.</p>
+
+      <h3>No Man Without My Woman</h3>
+      <p>A dramatic album track that became part of the main UK and Ireland setlists.</p>
+
+      <h3>Loser</h3>
+      <p>A recurring live track from the debut album.</p>
+
+      <h3>She’s My Girl (Interlude)</h3>
+      <p>A short interlude from the album that has also been performed live.</p>
+
+      <h3>Break It</h3>
+      <p>A regular part of the early solo setlists.</p>
+
+      <h3>Missing You Already</h3>
+      <p>One of the most played GRESLEY songs so far.</p>
+
+      <h3>The Boys</h3>
+      <p>A staple of every GRESLEY show so far.</p>
+    </div>
+  </section>
+
+  <section id="stats">
+    <h2>Live Statistics</h2>
+
+    <div class="card">
+      <div class="stats-grid">
+        <div class="stat-box">
+          <strong>1</strong>
+          Album Released
+        </div>
+
+        <div class="stat-box">
+          <strong>10</strong>
+          Album Tracks
+        </div>
+
+        <div class="stat-box">
+          <strong>5</strong>
+          Shows Played
+        </div>
+
+        <div class="stat-box">
+          <strong>1</strong>
+          Upcoming Show
+        </div>
+
+        <div class="stat-box">
+          <strong>4</strong>
+          Places Played
+          <br />
+          USA, England, Ireland, Scotland
+        </div>
+
+        <div class="stat-box">
+          <strong>4</strong>
+          Covers Performed
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="mostplayed">
+    <h2>Most Played Songs</h2>
+
+    <div class="card">
+      <ol>
+        <li>How? — 5 times</li>
+        <li>Think of You — 5 times</li>
+        <li>Piece of Your Love — 5 times</li>
+        <li>Missing You Already — 5 times</li>
+        <li>The Boys — 5 times</li>
+        <li>She’s My Girl (Interlude) — 5 times</li>
+        <li>Babyface — 4 times</li>
+        <li>Loser — 4 times</li>
+        <li>No Man Without My Woman — 4 times</li>
+        <li>Break It — 4 times</li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="covers">
+    <h2>Live Covers</h2>
+
+    <div class="card">
+      <ul>
+        <li>Remember — New Hope Club cover</li>
+        <li>Cherry Wine — Hozier cover</li>
+        <li>Last Request — Paolo Nutini cover</li>
+        <li>Wish You Were Here — Pink Floyd cover/snippet</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="timeline">
+    <h2>GRESLEY Timeline</h2>
+
+    <div class="card">
+      <ul>
+        <li><strong>2015</strong> — New Hope Club forms.</li>
+        <li><strong>2020</strong> — New Hope Club releases their self-titled debut album.</li>
+        <li><strong>April 24, 2026</strong> — GRESLEY releases <em>Songs I Wrote Since She Left</em>.</li>
+        <li><strong>April 25, 2026</strong> — First GRESLEY solo live set at The Palm & The Pine in Los Angeles.</li>
+        <li><strong>May 5, 2026</strong> — First proper UK solo show at The Castle Hotel in Manchester.</li>
+        <li><strong>May 12, 2026</strong> — London headline show at The Lower Third.</li>
+        <li><strong>June 12, 2026</strong> — Upcoming Los Angeles show at El Cid.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="funfacts">
+    <h2>Fun Facts</h2>
+
+    <div class="card">
+      <ul>
+        <li>First GRESLEY album: <em>Songs I Wrote Since She Left</em></li>
+        <li>First solo show: April 25, 2026 at The Palm & The Pine in Los Angeles</li>
+        <li>First proper UK solo show: May 5, 2026 at The Castle Hotel in Manchester</li>
+        <li>“How?” has opened every full solo set so far.</li>
+        <li>“Piece of Your Love” has closed every known show so far.</li>
+        <li>GRESLEY has performed songs from his album, unreleased music, New Hope Club music, and covers.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <h2>Photo Gallery</h2>
+
+    <div class="card">
+      <p>
+        Add photos here later, such as album artwork, show posters, live photos,
+        or fan photos from each show.
+      </p>
+
+      <div class="gallery">
+        <div class="gallery-box">Album Cover</div>
+        <div class="gallery-box">Los Angeles Show</div>
+        <div class="gallery-box">Manchester Show</div>
+        <div class="gallery-box">Dublin Show</div>
+        <div class="gallery-box">Glasgow Show</div>
+        <div class="gallery-box">London Show</div>
+      </div>
     </div>
   </section>
 
