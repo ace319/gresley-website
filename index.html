@@ -7,144 +7,155 @@
   <title>GRESLEY | George Smith Fan Site</title>
 
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #05080f;
-      color: #f8f8ff;
-      line-height: 1.6;
-    }
+  * {
+    box-sizing: border-box;
+  }
 
-    header {
-      background:
-        linear-gradient(rgba(5, 8, 15, 0.45), rgba(5, 8, 15, 0.88)),
-        linear-gradient(135deg, #0047b3, #ffffff 45%, #d66be8 75%);
-      padding: 110px 20px;
-      text-align: center;
-    }
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #070b18;
+    color: #f4f6ff;
+    line-height: 1.6;
+  }
 
-    header h1 {
-      font-size: 4.5rem;
-      margin-bottom: 10px;
-      color: #d66be8;
-      letter-spacing: 5px;
-      text-shadow: 3px 3px 0 #ffffff;
-    }
+  header {
+    background:
+      linear-gradient(rgba(7, 11, 24, 0.35), rgba(7, 11, 24, 0.95)),
+      linear-gradient(135deg, #0b3d91, #6536b8, #d76be8);
+    padding: 115px 20px;
+    text-align: center;
+  }
 
-    header p {
-      font-size: 1.2rem;
-      color: #ffffff;
-    }
+  header h1 {
+    font-size: clamp(3rem, 8vw, 5rem);
+    margin: 0 0 12px;
+    color: #ffffff;
+    letter-spacing: 6px;
+  }
 
-    nav {
-      background: #001f5c;
-      padding: 16px;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      border-bottom: 3px solid #d66be8;
-    }
+  header p {
+    font-size: 1.15rem;
+    color: #e6e9ff;
+    margin: 0;
+  }
 
+  nav {
+    background: rgba(7, 11, 24, 0.95);
+    padding: 14px 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(215, 107, 232, 0.35);
+  }
+
+  nav a {
+    color: #f4f6ff;
+    margin: 0 12px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+  }
+
+  nav a:hover {
+    color: #d76be8;
+  }
+
+  section {
+    max-width: 980px;
+    margin: auto;
+    padding: 55px 20px;
+  }
+
+  h2 {
+    color: #d76be8;
+    font-size: 2rem;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+  }
+
+  h3 {
+    color: #ffffff;
+    margin-top: 0;
+  }
+
+  a {
+    color: #d76be8;
+  }
+
+  .card {
+    background: rgba(16, 25, 58, 0.9);
+    padding: 26px;
+    border-radius: 20px;
+    margin-top: 22px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+  }
+
+  img {
+    width: 100%;
+    max-width: 520px;
+    display: block;
+    margin: 22px auto;
+    border-radius: 18px;
+    border: none;
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.35);
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+    gap: 16px;
+  }
+
+  .stat-box {
+    background: rgba(8, 14, 33, 0.85);
+    padding: 20px;
+    border-radius: 18px;
+    text-align: center;
+    border: 1px solid rgba(215, 107, 232, 0.25);
+  }
+
+  .stat-box strong {
+    display: block;
+    font-size: 2rem;
+    color: #ffffff;
+  }
+
+  .song-counts {
+    columns: 2;
+    column-gap: 40px;
+  }
+
+  li {
+    margin-bottom: 6px;
+  }
+
+  footer {
+    background: #050812;
+    text-align: center;
+    padding: 28px;
+    color: #cfd4ff;
+    border-top: 1px solid rgba(215, 107, 232, 0.35);
+  }
+
+  @media (max-width: 700px) {
     nav a {
-      color: #ffffff;
-      margin: 0 14px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1rem;
-    }
-
-    nav a:hover {
-      color: #d66be8;
-    }
-
-    section {
-      max-width: 950px;
-      margin: auto;
-      padding: 55px 20px;
-    }
-
-    h2 {
-      color: #d66be8;
-      font-size: 2.2rem;
-      margin-bottom: 15px;
-      text-transform: uppercase;
-    }
-
-    h3 {
-      color: #ffffff;
-    }
-
-    a {
-      color: #d66be8;
-    }
-
-    .card {
-      background: #0b1630;
-      padding: 25px;
-      border-radius: 16px;
-      margin-top: 20px;
-      border: 2px solid #1947a3;
-      box-shadow: 0 0 25px rgba(214, 107, 232, 0.15);
-    }
-
-    img {
-      width: 100%;
-      max-width: 560px;
-      display: block;
-      margin: 20px auto;
-      border-radius: 16px;
-      border: 3px solid #ffffff;
-    }
-
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 15px;
-    }
-
-    .stat-box {
-      background: #101f46;
-      padding: 20px;
-      border-radius: 14px;
-      text-align: center;
-      border: 2px solid #d66be8;
-    }
-
-    .stat-box strong {
-      display: block;
-      font-size: 2rem;
-      color: #d66be8;
+      display: inline-block;
+      margin: 6px 8px;
     }
 
     .song-counts {
-      columns: 2;
-      column-gap: 40px;
+      columns: 1;
     }
 
-    @media (max-width: 700px) {
-      .song-counts {
-        columns: 1;
-      }
-
-      header h1 {
-        font-size: 3rem;
-      }
-
-      nav a {
-        display: inline-block;
-        margin: 6px 8px;
-      }
+    section {
+      padding: 40px 16px;
     }
-
-    footer {
-      background: #001f5c;
-      text-align: center;
-      padding: 25px;
-      color: #ffffff;
-      border-top: 3px solid #d66be8;
-    }
-  </style>
+  }
+</style>
 
 </head>
 
