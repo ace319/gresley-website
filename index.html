@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +8,10 @@
   <style>
     * {
       box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -23,7 +26,7 @@
       background:
         linear-gradient(rgba(7, 11, 24, 0.35), rgba(7, 11, 24, 0.95)),
         linear-gradient(135deg, #0b3d91, #6536b8, #d76be8);
-      padding: 115px 20px;
+      padding: 75px 20px;
       text-align: center;
     }
 
@@ -37,7 +40,24 @@
     header p {
       font-size: 1.15rem;
       color: #e6e9ff;
-      margin: 0;
+      margin: 0 0 18px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #d76be8;
+      color: white;
+      padding: 10px 22px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.25s ease;
+    }
+
+    .button:hover {
+      background: #ffffff;
+      color: #6536b8;
+      transform: translateY(-2px);
     }
 
     nav {
@@ -53,20 +73,30 @@
 
     nav a {
       color: #f4f6ff;
-      margin: 0 12px;
+      margin: 0 6px;
+      padding: 8px 14px;
+      border-radius: 999px;
       text-decoration: none;
       font-weight: 700;
       font-size: 0.95rem;
+      transition: all 0.25s ease;
     }
 
     nav a:hover {
-      color: #d76be8;
+      color: #ffffff;
+      background: linear-gradient(135deg, #0b3d91, #d76be8);
+      box-shadow: 0 0 18px rgba(215, 107, 232, 0.45);
+      transform: translateY(-2px);
+    }
+
+    nav a:active {
+      transform: scale(0.94);
     }
 
     section {
       max-width: 980px;
       margin: auto;
-      padding: 55px 20px;
+      padding: 45px 20px;
     }
 
     h2 {
@@ -96,16 +126,16 @@
 
     img {
       width: 100%;
-      max-width: 520px;
+      max-width: 420px;
       display: block;
-      margin: 22px auto;
+      margin: 20px auto;
       border-radius: 18px;
       border: none;
       box-shadow: 0 16px 35px rgba(0, 0, 0, 0.35);
     }
 
-    .wide-img {
-      max-width: 700px;
+    .poster-img {
+      max-width: 520px;
     }
 
     .stats-grid,
@@ -115,7 +145,8 @@
       gap: 16px;
     }
 
-    .stat-box {
+    .stat-box,
+    .merch-item {
       background: rgba(8, 14, 33, 0.85);
       padding: 20px;
       border-radius: 18px;
@@ -129,23 +160,9 @@
       color: #ffffff;
     }
 
-    .merch-item {
-      background: rgba(8, 14, 33, 0.85);
-      padding: 18px;
-      border-radius: 18px;
-      text-align: center;
-      border: 1px solid rgba(215, 107, 232, 0.25);
-    }
-
     .merch-item img {
       max-width: 260px;
-      margin: 15px auto;
       background: white;
-    }
-
-    .song-counts {
-      columns: 2;
-      column-gap: 40px;
     }
 
     li {
@@ -166,12 +183,8 @@
         margin: 6px 8px;
       }
 
-      .song-counts {
-        columns: 1;
-      }
-
       section {
-        padding: 40px 16px;
+        padding: 38px 16px;
       }
     }
   </style>
@@ -182,6 +195,7 @@
   <header>
     <h1>GRESLEY</h1>
     <p>The solo project of George Smith</p>
+    <a class="button" href="https://gresley.printify.me/" target="_blank">Shop Merch</a>
   </header>
 
   <nav>
@@ -192,6 +206,15 @@
     <a href="#gallery">Gallery</a>
     <a href="#links">Links</a>
   </nav>
+
+  <section>
+    <div class="card">
+      <h3>Latest Update</h3>
+      <p>
+        June 12, 2026 — GRESLEY returns to Los Angeles for a headline show at El Cid.
+      </p>
+    </div>
+  </section>
 
   <section id="about">
     <h2>About</h2>
@@ -256,27 +279,22 @@
         <li>Missing You Already</li>
         <li>The Boys</li>
       </ol>
-
-      <h3>Handwritten Tracklist Artwork</h3>
-      <img src="album-tracklist-art.jpg" alt="Songs I Wrote Since She Left handwritten tracklist artwork">
     </div>
 
     <div class="card">
       <h3>Singles</h3>
       <ol>
         <li><strong>How?</strong><br>Released January 29, 2026. The debut GRESLEY solo single.</li>
-        <li><strong>Babyface</strong><br>Released February 27, 2026. The second single from <em>Songs I Wrote Since She Left</em>.</li>
-        <li><strong>Think of You</strong><br>Released March 27, 2026. The third single from <em>Songs I Wrote Since She Left</em>.</li>
+        <li><strong>Babyface</strong><br>Released February 27, 2026. The second single.</li>
+        <li><strong>Think of You</strong><br>Released March 27, 2026. The third single.</li>
       </ol>
     </div>
 
     <div class="card">
-      <h3>Song Notes</h3>
-      <p><strong>How?</strong> — The debut solo single and a key live opener.</p>
-      <p><strong>Babyface</strong> — The second single and a fan favorite from the early live shows.</p>
-      <p><strong>Think of You</strong> — The third single and one of the emotional centerpieces of the album.</p>
-      <p><strong>Piece of Your Love</strong> — A major live closer in the early GRESLEY era.</p>
-      <p><strong>Stunna</strong> — Known unreleased song performed live.</p>
+      <h3>Unreleased Song</h3>
+      <p>
+        <strong>Stunna</strong> is a known unreleased song that has been performed live four times.
+      </p>
     </div>
   </section>
 
@@ -286,7 +304,7 @@
     <div class="card">
       <h3>Upcoming Show</h3>
 
-      <img src="el-cid-poster.jpg" alt="GRESLEY El Cid Los Angeles show poster">
+      <img class="poster-img" src="el-cid-poster.jpg" alt="GRESLEY El Cid Los Angeles show poster">
 
       <p>
         <strong>June 12, 2026 — El Cid, Los Angeles, CA</strong><br>
@@ -294,15 +312,15 @@
       </p>
 
       <p>
-        <a href="https://dice.fm/partner/tickets/event/6dkmx8-gresley-live-in-los-angeles-with-tor-miller-12th-jun-el-cid-los-angeles-tickets" target="_blank">
-          Buy tickets on DICE
+        <a class="button" href="https://dice.fm/partner/tickets/event/6dkmx8-gresley-live-in-los-angeles-with-tor-miller-12th-jun-el-cid-los-angeles-tickets" target="_blank">
+          Buy Tickets
         </a>
       </p>
     </div>
 
     <div class="card">
       <h3>UK & Ireland 2026 Poster</h3>
-      <img src="uk-ireland-tour-poster.jpg" alt="GRESLEY UK and Ireland 2026 tour poster">
+      <img class="poster-img" src="uk-ireland-tour-poster.jpg" alt="GRESLEY UK and Ireland 2026 tour poster">
     </div>
 
     <div class="card">
@@ -335,31 +353,8 @@
     </div>
 
     <div class="card">
-      <h3>All Song Performance Counts</h3>
-
-      <ul class="song-counts">
-        <li>Babyface — 4</li>
-        <li>Break It — 4</li>
-        <li>Cherry Wine — 1</li>
-        <li>How? — 5</li>
-        <li>Last Request — 1</li>
-        <li>Loser — 4</li>
-        <li>Missing You Already — 5</li>
-        <li>No Man Without My Woman — 4</li>
-        <li>Piece of Your Love — 5</li>
-        <li>Remember — 4</li>
-        <li>She’s My Girl (Interlude) — 5</li>
-        <li>Stunna — 4</li>
-        <li>The Boys — 5</li>
-        <li>Think of You — 5</li>
-        <li>Wish You Were Here — 1</li>
-      </ul>
-    </div>
-
-    <div class="card">
       <h3>April 25, 2026 — The Palm & The Pine, Los Angeles, CA</h3>
       <p>First small live set / soft launch.</p>
-
       <h4>Setlist</h4>
       <ol>
         <li>How?</li>
@@ -374,7 +369,6 @@
     <div class="card">
       <h3>May 5, 2026 — The Castle Hotel, Manchester, England</h3>
       <p>First proper UK tour show.</p>
-
       <h4>Setlist</h4>
       <ol>
         <li>How?</li>
@@ -394,7 +388,6 @@
 
     <div class="card">
       <h3>May 7, 2026 — Whelan’s Upstairs, Dublin, Ireland</h3>
-
       <h4>Setlist</h4>
       <ol>
         <li>How?</li>
@@ -415,7 +408,6 @@
 
     <div class="card">
       <h3>May 10, 2026 — The Attic at The Garage, Glasgow, Scotland</h3>
-
       <h4>Setlist</h4>
       <ol>
         <li>How?</li>
@@ -436,7 +428,6 @@
 
     <div class="card">
       <h3>May 12, 2026 — The Lower Third, London, England</h3>
-
       <h4>Setlist</h4>
       <ol>
         <li>How?</li>
@@ -454,30 +445,6 @@
         <li>Piece of Your Love</li>
       </ol>
     </div>
-
-    <div class="card">
-      <h3>Live Covers</h3>
-      <ul>
-        <li>Remember — New Hope Club cover</li>
-        <li>Cherry Wine — Hozier cover</li>
-        <li>Last Request — Paolo Nutini cover</li>
-        <li>Wish You Were Here — Pink Floyd cover/snippet</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h3>Timeline</h3>
-      <ul>
-        <li><strong>2015</strong> — New Hope Club forms.</li>
-        <li><strong>End of 2024</strong> — New Hope Club breaks up.</li>
-        <li><strong>January 29, 2026</strong> — GRESLEY releases “How?” as his debut solo single.</li>
-        <li><strong>February 27, 2026</strong> — GRESLEY releases “Babyface.”</li>
-        <li><strong>March 27, 2026</strong> — GRESLEY releases “Think of You.”</li>
-        <li><strong>April 24, 2026</strong> — GRESLEY releases <em>Songs I Wrote Since She Left</em>.</li>
-        <li><strong>April 25, 2026</strong> — First GRESLEY solo live set in Los Angeles.</li>
-        <li><strong>June 12, 2026</strong> — Upcoming Los Angeles show at El Cid.</li>
-      </ul>
-    </div>
   </section>
 
   <section id="merch">
@@ -492,8 +459,8 @@
       </p>
 
       <p>
-        <a href="https://gresley.printify.me/" target="_blank">
-          Visit the Official Merch Store
+        <a class="button" href="https://gresley.printify.me/" target="_blank">
+          Visit Merch Store
         </a>
       </p>
 
@@ -522,21 +489,31 @@
     <div class="card">
       <h3>Main Promo Photo</h3>
       <img src="gresley-main-promo.jpg" alt="GRESLEY main promotional photo">
+    </div>
 
+    <div class="card">
       <h3>Ocean Promo Photo</h3>
       <img src="gresley-promo-photo.jpg" alt="GRESLEY ocean promotional photo">
+    </div>
 
+    <div class="card">
       <h3>Album Cover</h3>
       <img src="album-cover.jpg" alt="Songs I Wrote Since She Left album cover">
+    </div>
 
+    <div class="card">
       <h3>Handwritten Tracklist Artwork</h3>
       <img src="album-tracklist-art.jpg" alt="Songs I Wrote Since She Left handwritten tracklist">
+    </div>
 
+    <div class="card">
       <h3>UK & Ireland 2026 Poster</h3>
-      <img src="uk-ireland-tour-poster.jpg" alt="GRESLEY UK and Ireland 2026 tour poster">
+      <img class="poster-img" src="uk-ireland-tour-poster.jpg" alt="GRESLEY UK and Ireland 2026 tour poster">
+    </div>
 
+    <div class="card">
       <h3>June 12, 2026 — El Cid Los Angeles Poster</h3>
-      <img src="el-cid-poster.jpg" alt="GRESLEY El Cid Los Angeles show poster">
+      <img class="poster-img" src="el-cid-poster.jpg" alt="GRESLEY El Cid Los Angeles show poster">
     </div>
   </section>
 
@@ -544,7 +521,7 @@
     <h2>Links</h2>
 
     <div class="card">
-      <h3>Official Social Media</h3>
+      <h3>Official Links</h3>
 
       <p>Instagram: <a href="https://www.instagram.com/gresley" target="_blank">@gresley</a></p>
       <p>TikTok: <a href="https://www.tiktok.com/@itsgresley" target="_blank">@itsgresley</a></p>
@@ -566,7 +543,6 @@
 
 </body>
 </html>
-```
 
 
 
