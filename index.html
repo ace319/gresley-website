@@ -6,13 +6,9 @@
   <title>GRESLEY | George Smith Fan Site</title>
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
@@ -89,10 +85,6 @@
       transform: translateY(-2px);
     }
 
-    nav a:active {
-      transform: scale(0.94);
-    }
-
     section {
       max-width: 980px;
       margin: auto;
@@ -106,14 +98,9 @@
       letter-spacing: 1px;
     }
 
-    h3 {
-      color: #ffffff;
-      margin-top: 0;
-    }
+    h3 { color: #ffffff; margin-top: 0; }
 
-    a {
-      color: #d76be8;
-    }
+    a { color: #d76be8; }
 
     .card {
       background: rgba(16, 25, 58, 0.9);
@@ -134,19 +121,19 @@
       box-shadow: 0 16px 35px rgba(0, 0, 0, 0.35);
     }
 
-    .poster-img {
-      max-width: 520px;
-    }
+    .poster-img { max-width: 540px; }
 
     .stats-grid,
-    .merch-grid {
+    .merch-grid,
+    .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
       gap: 16px;
     }
 
     .stat-box,
-    .merch-item {
+    .merch-item,
+    .gallery-item {
       background: rgba(8, 14, 33, 0.85);
       padding: 20px;
       border-radius: 18px;
@@ -160,14 +147,32 @@
       color: #ffffff;
     }
 
-    .merch-item img {
+    .merch-item img,
+    .gallery-item img {
       max-width: 260px;
       background: white;
     }
 
-    li {
-      margin-bottom: 6px;
+    iframe {
+      border-radius: 18px;
+      box-shadow: 0 16px 35px rgba(0, 0, 0, 0.35);
     }
+
+    details {
+      background: rgba(8, 14, 33, 0.85);
+      padding: 16px 20px;
+      border-radius: 16px;
+      margin: 14px 0;
+      border: 1px solid rgba(215, 107, 232, 0.25);
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    li { margin-bottom: 6px; }
 
     footer {
       background: #050812;
@@ -202,6 +207,7 @@
     <a href="#about">About</a>
     <a href="#music">Music</a>
     <a href="#shows">Shows</a>
+    <a href="#video">Video</a>
     <a href="#merch">Merch</a>
     <a href="#gallery">Gallery</a>
     <a href="#links">Links</a>
@@ -210,9 +216,7 @@
   <section>
     <div class="card">
       <h3>Latest Update</h3>
-      <p>
-        June 12, 2026 — GRESLEY returns to Los Angeles for a headline show at El Cid.
-      </p>
+      <p>June 12, 2026 — GRESLEY returns to Los Angeles for a headline show at El Cid.</p>
     </div>
   </section>
 
@@ -221,7 +225,6 @@
 
     <div class="card">
       <h3>Who Is GRESLEY?</h3>
-
       <img src="gresley-main-promo.jpg" alt="GRESLEY main promotional photo">
 
       <p>
@@ -237,8 +240,7 @@
       </p>
 
       <p>
-        He chose the name <strong>GRESLEY</strong> because Gresley is his middle name,
-        making the project feel personal and connected to who he is.
+        He chose the name <strong>GRESLEY</strong> because Gresley is his middle name.
       </p>
     </div>
 
@@ -258,7 +260,6 @@
 
     <div class="card">
       <h3>Songs I Wrote Since She Left</h3>
-
       <img src="album-cover.jpg" alt="Songs I Wrote Since She Left album cover">
 
       <p>
@@ -292,9 +293,7 @@
 
     <div class="card">
       <h3>Unreleased Song</h3>
-      <p>
-        <strong>Stunna</strong> is a known unreleased song that has been performed live four times.
-      </p>
+      <p><strong>Stunna</strong> is a known unreleased song that has been performed live four times.</p>
     </div>
   </section>
 
@@ -303,7 +302,6 @@
 
     <div class="card">
       <h3>Upcoming Show</h3>
-
       <img class="poster-img" src="el-cid-poster.jpg" alt="GRESLEY El Cid Los Angeles show poster">
 
       <p>
@@ -319,13 +317,7 @@
     </div>
 
     <div class="card">
-      <h3>UK & Ireland 2026 Poster</h3>
-      <img class="poster-img" src="uk-ireland-tour-poster.jpg" alt="GRESLEY UK and Ireland 2026 tour poster">
-    </div>
-
-    <div class="card">
       <h3>Show Stats</h3>
-
       <div class="stats-grid">
         <div class="stat-box"><strong>5</strong>Shows Played</div>
         <div class="stat-box"><strong>1</strong>Upcoming Show</div>
@@ -353,97 +345,115 @@
     </div>
 
     <div class="card">
-      <h3>April 25, 2026 — The Palm & The Pine, Los Angeles, CA</h3>
-      <p>First small live set / soft launch.</p>
-      <h4>Setlist</h4>
-      <ol>
-        <li>How?</li>
-        <li>Think of You</li>
-        <li>She’s My Girl (Interlude)</li>
-        <li>Missing You Already</li>
-        <li>The Boys</li>
-        <li>Piece of Your Love</li>
-      </ol>
+      <h3>Setlist Archive</h3>
+
+      <details open>
+        <summary>April 25, 2026 — The Palm & The Pine, Los Angeles, CA</summary>
+        <p>First small live set / soft launch.</p>
+        <ol>
+          <li>How?</li>
+          <li>Think of You</li>
+          <li>She’s My Girl (Interlude)</li>
+          <li>Missing You Already</li>
+          <li>The Boys</li>
+          <li>Piece of Your Love</li>
+        </ol>
+      </details>
+
+      <details>
+        <summary>May 5, 2026 — The Castle Hotel, Manchester, England</summary>
+        <p>First proper UK tour show.</p>
+        <ol>
+          <li>How?</li>
+          <li>Babyface</li>
+          <li>Loser</li>
+          <li>No Man Without My Woman</li>
+          <li>Think of You</li>
+          <li>Stunna — unreleased</li>
+          <li>Break It</li>
+          <li>She’s My Girl (Interlude)</li>
+          <li>Remember — New Hope Club cover</li>
+          <li>Missing You Already</li>
+          <li>The Boys</li>
+          <li>Piece of Your Love</li>
+        </ol>
+      </details>
+
+      <details>
+        <summary>May 7, 2026 — Whelan’s Upstairs, Dublin, Ireland</summary>
+        <ol>
+          <li>How?</li>
+          <li>Babyface</li>
+          <li>Loser</li>
+          <li>No Man Without My Woman</li>
+          <li>Think of You</li>
+          <li>Stunna — unreleased</li>
+          <li>Break It</li>
+          <li>She’s My Girl (Interlude)</li>
+          <li>Remember — New Hope Club cover</li>
+          <li>Missing You Already</li>
+          <li>Cherry Wine — Hozier cover</li>
+          <li>The Boys</li>
+          <li>Piece of Your Love</li>
+        </ol>
+      </details>
+
+      <details>
+        <summary>May 10, 2026 — The Attic at The Garage, Glasgow, Scotland</summary>
+        <ol>
+          <li>How?</li>
+          <li>Babyface</li>
+          <li>Loser</li>
+          <li>No Man Without My Woman</li>
+          <li>Think of You</li>
+          <li>Stunna — unreleased</li>
+          <li>Break It</li>
+          <li>She’s My Girl (Interlude)</li>
+          <li>Remember — New Hope Club cover</li>
+          <li>Missing You Already</li>
+          <li>Last Request — Paolo Nutini cover</li>
+          <li>The Boys</li>
+          <li>Piece of Your Love</li>
+        </ol>
+      </details>
+
+      <details>
+        <summary>May 12, 2026 — The Lower Third, London, England</summary>
+        <ol>
+          <li>How?</li>
+          <li>Babyface</li>
+          <li>Loser</li>
+          <li>No Man Without My Woman</li>
+          <li>Think of You</li>
+          <li>Stunna — unreleased</li>
+          <li>Break It</li>
+          <li>She’s My Girl (Interlude)</li>
+          <li>Remember — New Hope Club cover</li>
+          <li>Missing You Already</li>
+          <li>Wish You Were Here — Pink Floyd cover/snippet</li>
+          <li>The Boys</li>
+          <li>Piece of Your Love</li>
+        </ol>
+      </details>
     </div>
+  </section>
+
+  <section id="video">
+    <h2>Video</h2>
 
     <div class="card">
-      <h3>May 5, 2026 — The Castle Hotel, Manchester, England</h3>
-      <p>First proper UK tour show.</p>
-      <h4>Setlist</h4>
-      <ol>
-        <li>How?</li>
-        <li>Babyface</li>
-        <li>Loser</li>
-        <li>No Man Without My Woman</li>
-        <li>Think of You</li>
-        <li>Stunna — unreleased</li>
-        <li>Break It</li>
-        <li>She’s My Girl (Interlude)</li>
-        <li>Remember — New Hope Club cover</li>
-        <li>Missing You Already</li>
-        <li>The Boys</li>
-        <li>Piece of Your Love</li>
-      </ol>
-    </div>
+      <h3>Piece of Your Love — Music Video</h3>
 
-    <div class="card">
-      <h3>May 7, 2026 — Whelan’s Upstairs, Dublin, Ireland</h3>
-      <h4>Setlist</h4>
-      <ol>
-        <li>How?</li>
-        <li>Babyface</li>
-        <li>Loser</li>
-        <li>No Man Without My Woman</li>
-        <li>Think of You</li>
-        <li>Stunna — unreleased</li>
-        <li>Break It</li>
-        <li>She’s My Girl (Interlude)</li>
-        <li>Remember — New Hope Club cover</li>
-        <li>Missing You Already</li>
-        <li>Cherry Wine — Hozier cover</li>
-        <li>The Boys</li>
-        <li>Piece of Your Love</li>
-      </ol>
-    </div>
+      <iframe
+        width="100%"
+        height="315"
+        src="https://www.youtube.com/embed/D_oXgv7zf44"
+        title="GRESLEY - Piece of Your Love Music Video"
+        frameborder="0"
+        allowfullscreen>
+      </iframe>
 
-    <div class="card">
-      <h3>May 10, 2026 — The Attic at The Garage, Glasgow, Scotland</h3>
-      <h4>Setlist</h4>
-      <ol>
-        <li>How?</li>
-        <li>Babyface</li>
-        <li>Loser</li>
-        <li>No Man Without My Woman</li>
-        <li>Think of You</li>
-        <li>Stunna — unreleased</li>
-        <li>Break It</li>
-        <li>She’s My Girl (Interlude)</li>
-        <li>Remember — New Hope Club cover</li>
-        <li>Missing You Already</li>
-        <li>Last Request — Paolo Nutini cover</li>
-        <li>The Boys</li>
-        <li>Piece of Your Love</li>
-      </ol>
-    </div>
-
-    <div class="card">
-      <h3>May 12, 2026 — The Lower Third, London, England</h3>
-      <h4>Setlist</h4>
-      <ol>
-        <li>How?</li>
-        <li>Babyface</li>
-        <li>Loser</li>
-        <li>No Man Without My Woman</li>
-        <li>Think of You</li>
-        <li>Stunna — unreleased</li>
-        <li>Break It</li>
-        <li>She’s My Girl (Interlude)</li>
-        <li>Remember — New Hope Club cover</li>
-        <li>Missing You Already</li>
-        <li>Wish You Were Here — Pink Floyd cover/snippet</li>
-        <li>The Boys</li>
-        <li>Piece of Your Love</li>
-      </ol>
+      <p>Watch the official music video for “Piece of Your Love.”</p>
     </div>
   </section>
 
@@ -453,10 +463,7 @@
     <div class="card">
       <h3>Official GRESLEY Merch</h3>
 
-      <p>
-        The official GRESLEY merch store includes items like the tote bag, tee,
-        and denim cap.
-      </p>
+      <p>The official GRESLEY merch store includes items like the tote bag, tee, and denim cap.</p>
 
       <p>
         <a class="button" href="https://gresley.printify.me/" target="_blank">
@@ -486,34 +493,36 @@
   <section id="gallery">
     <h2>Gallery</h2>
 
-    <div class="card">
-      <h3>Main Promo Photo</h3>
-      <img src="gresley-main-promo.jpg" alt="GRESLEY main promotional photo">
-    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <h3>Main Promo Photo</h3>
+        <img src="gresley-main-promo.jpg" alt="GRESLEY main promotional photo">
+      </div>
 
-    <div class="card">
-      <h3>Ocean Promo Photo</h3>
-      <img src="gresley-promo-photo.jpg" alt="GRESLEY ocean promotional photo">
-    </div>
+      <div class="gallery-item">
+        <h3>Ocean Promo Photo</h3>
+        <img src="gresley-promo-photo.jpg" alt="GRESLEY ocean promotional photo">
+      </div>
 
-    <div class="card">
-      <h3>Album Cover</h3>
-      <img src="album-cover.jpg" alt="Songs I Wrote Since She Left album cover">
-    </div>
+      <div class="gallery-item">
+        <h3>Album Cover</h3>
+        <img src="album-cover.jpg" alt="Songs I Wrote Since She Left album cover">
+      </div>
 
-    <div class="card">
-      <h3>Handwritten Tracklist Artwork</h3>
-      <img src="album-tracklist-art.jpg" alt="Songs I Wrote Since She Left handwritten tracklist">
-    </div>
+      <div class="gallery-item">
+        <h3>Tracklist Artwork</h3>
+        <img src="album-tracklist-art.jpg" alt="Songs I Wrote Since She Left handwritten tracklist">
+      </div>
 
-    <div class="card">
-      <h3>UK & Ireland 2026 Poster</h3>
-      <img class="poster-img" src="uk-ireland-tour-poster.jpg" alt="GRESLEY UK and Ireland 2026 tour poster">
-    </div>
+      <div class="gallery-item">
+        <h3>UK & Ireland Poster</h3>
+        <img src="uk-ireland-tour-poster.jpg" alt="GRESLEY UK and Ireland 2026 tour poster">
+      </div>
 
-    <div class="card">
-      <h3>June 12, 2026 — El Cid Los Angeles Poster</h3>
-      <img class="poster-img" src="el-cid-poster.jpg" alt="GRESLEY El Cid Los Angeles show poster">
+      <div class="gallery-item">
+        <h3>El Cid Poster</h3>
+        <img src="el-cid-poster.jpg" alt="GRESLEY El Cid Los Angeles show poster">
+      </div>
     </div>
   </section>
 
@@ -529,7 +538,6 @@
       <p>Merch Store: <a href="https://gresley.printify.me/" target="_blank">GRESLEY Merch</a></p>
 
       <h3>Fan Community</h3>
-
       <p>FVR Fan Hub: <a href="https://www.fvr.fan/gresley" target="_blank">Visit the GRESLEY Fan Hub</a></p>
       <p>Discord: <a href="https://discord.gg/E4CUmUkh9V" target="_blank">Join the GRESLEY Discord</a></p>
       <p>Photo Dumps: <a href="https://www.instagram.com/gresleydumps/" target="_blank">@gresleydumps</a></p>
@@ -543,6 +551,8 @@
 
 </body>
 </html>
+
+
 
 
 
