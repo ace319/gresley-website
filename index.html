@@ -7,7 +7,6 @@
 
   <style>
     * { box-sizing: border-box; }
-
     html { scroll-behavior: smooth; }
 
     body {
@@ -20,8 +19,8 @@
 
     header {
       background:
-        linear-gradient(rgba(7, 11, 24, 0.35), rgba(7, 11, 24, 0.95)),
-        linear-gradient(135deg, #0b3d91, #6536b8, #d76be8);
+        linear-gradient(rgba(7, 11, 24, 0.25), rgba(7, 11, 24, 0.95)),
+        linear-gradient(135deg, #0c1533, #244d9e, #f3a6ff);
       padding: 75px 20px;
       text-align: center;
     }
@@ -39,10 +38,16 @@
       margin: 0 0 18px;
     }
 
+    .hero-poster {
+      max-width: 330px;
+      margin: 28px auto;
+      border-radius: 22px;
+    }
+
     .button {
       display: inline-block;
-      background: #d76be8;
-      color: white;
+      background: #f3a6ff;
+      color: #0c1533;
       padding: 10px 22px;
       border-radius: 999px;
       text-decoration: none;
@@ -52,7 +57,7 @@
 
     .button:hover {
       background: #ffffff;
-      color: #6536b8;
+      color: #244d9e;
       transform: translateY(-2px);
     }
 
@@ -64,7 +69,7 @@
       top: 0;
       z-index: 10;
       backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(215, 107, 232, 0.35);
+      border-bottom: 1px solid rgba(243, 166, 255, 0.35);
     }
 
     nav a {
@@ -79,9 +84,9 @@
     }
 
     nav a:hover {
-      color: #ffffff;
-      background: linear-gradient(135deg, #0b3d91, #d76be8);
-      box-shadow: 0 0 18px rgba(215, 107, 232, 0.45);
+      color: #0c1533;
+      background: linear-gradient(135deg, #7ca7ff, #f3a6ff);
+      box-shadow: 0 0 18px rgba(243, 166, 255, 0.45);
       transform: translateY(-2px);
     }
 
@@ -92,7 +97,7 @@
     }
 
     h2 {
-      color: #d76be8;
+      color: #f3a6ff;
       font-size: 2rem;
       margin-bottom: 18px;
       letter-spacing: 1px;
@@ -103,7 +108,7 @@
       margin-top: 0;
     }
 
-    a { color: #d76be8; }
+    a { color: #f3a6ff; }
 
     .card {
       background: rgba(16, 25, 58, 0.9);
@@ -141,7 +146,7 @@
       padding: 20px;
       border-radius: 18px;
       text-align: center;
-      border: 1px solid rgba(215, 107, 232, 0.25);
+      border: 1px solid rgba(243, 166, 255, 0.25);
     }
 
     .stat-box strong {
@@ -169,7 +174,7 @@
       padding: 16px 20px;
       border-radius: 16px;
       margin: 14px 0;
-      border: 1px solid rgba(215, 107, 232, 0.25);
+      border: 1px solid rgba(243, 166, 255, 0.25);
     }
 
     summary {
@@ -185,7 +190,7 @@
       text-align: center;
       padding: 28px;
       color: #cfd4ff;
-      border-top: 1px solid rgba(215, 107, 232, 0.35);
+      border-top: 1px solid rgba(243, 166, 255, 0.35);
     }
 
     @media (max-width: 700px) {
@@ -210,6 +215,9 @@
   <header>
     <h1>GRESLEY</h1>
     <p>The solo project of George Smith</p>
+
+    <img class="hero-poster" src="el-cid-poster-2026.jpg" alt="GRESLEY Los Angeles El Cid poster">
+
     <a class="button" href="https://gresley.printify.me/" target="_blank">Shop Merch</a>
   </header>
 
@@ -312,7 +320,7 @@
 
     <div class="card">
       <h3>Upcoming Show</h3>
-      <img class="poster-img" src="el-cid-poster.jpg" alt="GRESLEY El Cid Los Angeles show poster">
+      <img class="poster-img" src="el-cid-poster-2026.jpg" alt="GRESLEY El Cid Los Angeles show poster">
 
       <p>
         <strong>June 12, 2026 — El Cid, Los Angeles, CA</strong><br>
@@ -465,10 +473,6 @@
       <p>
         Watch the official music video for <strong>Piece of Your Love</strong>.
       </p>
-
-      <p>
-        Released during the <em>Songs I Wrote Since She Left</em> era.
-      </p>
     </div>
   </section>
 
@@ -536,7 +540,7 @@
 
       <div class="gallery-item">
         <h3>El Cid Poster</h3>
-        <img src="el-cid-poster.jpg" alt="GRESLEY El Cid Los Angeles show poster">
+        <img src="el-cid-poster-2026.jpg" alt="GRESLEY El Cid Los Angeles show poster">
       </div>
     </div>
   </section>
