@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +7,7 @@
 
   <style>
     * { box-sizing: border-box; }
+
     html { scroll-behavior: smooth; }
 
     body {
@@ -20,8 +20,8 @@
 
     header {
       background:
-        linear-gradient(rgba(7, 11, 24, 0.25), rgba(7, 11, 24, 0.95)),
-        linear-gradient(135deg, #0c1533, #244d9e, #f3a6ff);
+        linear-gradient(rgba(7, 11, 24, 0.35), rgba(7, 11, 24, 0.95)),
+        linear-gradient(135deg, #0c1533, #315eb8, #f3a6ff);
       padding: 75px 20px;
       text-align: center;
     }
@@ -39,16 +39,10 @@
       margin: 0 0 18px;
     }
 
-    .hero-poster {
-      max-width: 330px;
-      margin: 28px auto;
-      border-radius: 22px;
-    }
-
     .button {
       display: inline-block;
       background: #f3a6ff;
-      color: #0c1533;
+      color: #07102a;
       padding: 10px 22px;
       border-radius: 999px;
       text-decoration: none;
@@ -58,7 +52,7 @@
 
     .button:hover {
       background: #ffffff;
-      color: #244d9e;
+      color: #315eb8;
       transform: translateY(-2px);
     }
 
@@ -85,8 +79,8 @@
     }
 
     nav a:hover {
-      color: #0c1533;
-      background: linear-gradient(135deg, #7ca7ff, #f3a6ff);
+      color: #ffffff;
+      background: linear-gradient(135deg, #315eb8, #f3a6ff);
       box-shadow: 0 0 18px rgba(243, 166, 255, 0.45);
       transform: translateY(-2px);
     }
@@ -131,6 +125,11 @@
     }
 
     .poster-img { max-width: 540px; }
+
+    .hero-poster {
+      max-width: 340px;
+      margin-top: 25px;
+    }
 
     .stats-grid,
     .merch-grid,
@@ -216,10 +215,9 @@
   <header>
     <h1>GRESLEY</h1>
     <p>The solo project of George Smith</p>
-
-    <img class="hero-poster" src="el-cid-poster-2026.jpg" alt="GRESLEY Los Angeles El Cid poster">
-
     <a class="button" href="https://gresley.printify.me/" target="_blank">Shop Merch</a>
+
+    <img class="hero-poster" src="gresley-la-poster.jpg" alt="GRESLEY Los Angeles poster">
   </header>
 
   <nav>
@@ -321,11 +319,11 @@
 
     <div class="card">
       <h3>Upcoming Show</h3>
-      <img class="poster-img" src="el-cid-poster-2026.jpg" alt="GRESLEY El Cid Los Angeles show poster">
+      <img class="poster-img" src="gresley-la-poster.jpg" alt="GRESLEY Los Angeles show poster">
 
       <p>
         <strong>June 12, 2026 — El Cid, Los Angeles, CA</strong><br>
-        GRESLEY is set to perform live in Los Angeles at El Cid with Tor Miller.
+        GRESLEY is set to perform live in Los Angeles at El Cid with special guest Tor Miller.
       </p>
 
       <p>
@@ -474,6 +472,10 @@
       <p>
         Watch the official music video for <strong>Piece of Your Love</strong>.
       </p>
+
+      <p>
+        Released during the <em>Songs I Wrote Since She Left</em> era.
+      </p>
     </div>
   </section>
 
@@ -541,7 +543,7 @@
 
       <div class="gallery-item">
         <h3>El Cid Poster</h3>
-        <img src="el-cid-poster-2026.jpg" alt="GRESLEY El Cid Los Angeles show poster">
+        <img src="gresley-la-poster.jpg" alt="GRESLEY El Cid Los Angeles show poster">
       </div>
     </div>
   </section>
@@ -571,5 +573,3 @@
 
 </body>
 </html>
-```
-
