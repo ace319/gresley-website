@@ -1,13 +1,26 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta
+    name="description"
+    content="A fan-made archive dedicated to George Smith's solo project, GRESLEY."
+  />
+
   <title>GRESLEY | George Smith Fan Site</title>
 
   <style>
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 95px;
+    }
 
     body {
       margin: 0;
@@ -26,26 +39,34 @@
     }
 
     header h1 {
-      font-size: clamp(3rem, 8vw, 5rem);
       margin: 0 0 12px;
       color: #ffffff;
+      font-size: clamp(3rem, 8vw, 5rem);
       letter-spacing: 6px;
     }
 
     header p {
-      font-size: 1.15rem;
-      color: #e6e9ff;
       margin: 0 0 18px;
+      color: #e6e9ff;
+      font-size: 1.15rem;
+    }
+
+    .header-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 24px;
     }
 
     .button {
       display: inline-block;
-      background: #f3a6ff;
-      color: #07102a;
       padding: 10px 22px;
       border-radius: 999px;
-      text-decoration: none;
+      background: #f3a6ff;
+      color: #07102a;
       font-weight: bold;
+      text-decoration: none;
       transition: all 0.25s ease;
     }
 
@@ -55,25 +76,46 @@
       transform: translateY(-2px);
     }
 
+    .button.secondary {
+      background: transparent;
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.55);
+    }
+
+    .button.secondary:hover {
+      background: #ffffff;
+      color: #315eb8;
+    }
+
+    .hero-poster {
+      width: 100%;
+      max-width: 340px;
+      display: block;
+      margin: 25px auto 0;
+      border-radius: 18px;
+      box-shadow: 0 16px 35px rgba(0, 0, 0, 0.35);
+    }
+
     nav {
-      background: rgba(7, 11, 24, 0.95);
-      padding: 14px 20px;
-      text-align: center;
       position: sticky;
       top: 0;
       z-index: 10;
+      padding: 14px 20px;
+      text-align: center;
+      background: rgba(7, 11, 24, 0.95);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid rgba(243, 166, 255, 0.35);
     }
 
     nav a {
-      color: #f4f6ff;
-      margin: 0 6px;
+      display: inline-block;
+      margin: 3px 6px;
       padding: 8px 14px;
       border-radius: 999px;
-      text-decoration: none;
-      font-weight: 700;
+      color: #f4f6ff;
       font-size: 0.95rem;
+      font-weight: 700;
+      text-decoration: none;
       transition: all 0.25s ease;
     }
 
@@ -84,6 +126,10 @@
       transform: translateY(-2px);
     }
 
+    nav a:active {
+      transform: scale(0.95);
+    }
+
     section {
       max-width: 980px;
       margin: auto;
@@ -91,22 +137,63 @@
     }
 
     h2 {
+      margin-bottom: 18px;
       color: #f3a6ff;
       font-size: 2rem;
-      margin-bottom: 18px;
       letter-spacing: 1px;
     }
 
-    h3 { color: #ffffff; margin-top: 0; }
-    a { color: #f3a6ff; }
+    h3 {
+      margin-top: 0;
+      color: #ffffff;
+    }
+
+    h4 {
+      color: #dce3ff;
+    }
+
+    a {
+      color: #f3a6ff;
+    }
 
     .card {
-      background: rgba(16, 25, 58, 0.9);
-      padding: 26px;
-      border-radius: 20px;
       margin-top: 22px;
+      padding: 26px;
       border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      background: rgba(16, 25, 58, 0.9);
       box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+    }
+
+    .latest-card {
+      border: 1px solid rgba(243, 166, 255, 0.5);
+      background:
+        linear-gradient(
+          135deg,
+          rgba(49, 94, 184, 0.34),
+          rgba(243, 166, 255, 0.16)
+        ),
+        rgba(16, 25, 58, 0.95);
+    }
+
+    .update-badge {
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: #f3a6ff;
+      color: #07102a;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+    }
+
+    .album-milestone {
+      margin: 18px 0;
+      padding: 16px;
+      border-left: 4px solid #f3a6ff;
+      border-radius: 10px;
+      background: rgba(8, 14, 33, 0.72);
     }
 
     img {
@@ -114,13 +201,14 @@
       max-width: 420px;
       display: block;
       margin: 20px auto;
-      border-radius: 18px;
       border: none;
+      border-radius: 18px;
       box-shadow: 0 16px 35px rgba(0, 0, 0, 0.35);
     }
 
-    .hero-poster { max-width: 340px; margin-top: 25px; }
-    .poster-img { max-width: 540px; }
+    .poster-img {
+      max-width: 540px;
+    }
 
     .stats-grid,
     .merch-grid,
@@ -133,61 +221,90 @@
     .stat-box,
     .merch-item,
     .gallery-item {
-      background: rgba(8, 14, 33, 0.85);
       padding: 20px;
-      border-radius: 18px;
-      text-align: center;
       border: 1px solid rgba(243, 166, 255, 0.25);
+      border-radius: 18px;
+      background: rgba(8, 14, 33, 0.85);
+      text-align: center;
     }
 
     .stat-box strong {
       display: block;
-      font-size: 2rem;
       color: #ffffff;
+      font-size: 2rem;
     }
 
     .merch-item img,
     .gallery-item img {
       max-width: 260px;
-      background: white;
+      background: #ffffff;
     }
 
     iframe {
       width: 100%;
       height: 400px;
+      border: 0;
       border-radius: 18px;
-      overflow: hidden;
-      box-shadow: 0 16px 35px rgba(0,0,0,.35);
+      box-shadow: 0 16px 35px rgba(0, 0, 0, 0.35);
     }
 
     details {
-      background: rgba(8, 14, 33, 0.85);
-      padding: 16px 20px;
-      border-radius: 16px;
       margin: 14px 0;
+      padding: 16px 20px;
       border: 1px solid rgba(243, 166, 255, 0.25);
+      border-radius: 16px;
+      background: rgba(8, 14, 33, 0.85);
     }
 
     summary {
       cursor: pointer;
-      font-weight: bold;
       color: #ffffff;
+      font-weight: bold;
     }
 
-    li { margin-bottom: 6px; }
+    details[open] summary {
+      color: #f3a6ff;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    .release-list li {
+      margin-bottom: 22px;
+    }
+
+    .small-note {
+      color: #cfd4ff;
+      font-size: 0.92rem;
+    }
 
     footer {
-      background: #050812;
-      text-align: center;
       padding: 28px;
-      color: #cfd4ff;
       border-top: 1px solid rgba(243, 166, 255, 0.35);
+      background: #050812;
+      color: #cfd4ff;
+      text-align: center;
+    }
+
+    footer a {
+      margin: 0 6px;
+      text-decoration: none;
     }
 
     @media (max-width: 700px) {
+      header {
+        padding: 60px 16px;
+      }
+
+      nav {
+        padding: 10px;
+      }
+
       nav a {
-        display: inline-block;
-        margin: 6px 8px;
+        margin: 5px 3px;
+        padding: 7px 10px;
+        font-size: 0.88rem;
       }
 
       section {
@@ -196,6 +313,10 @@
 
       iframe {
         height: 250px;
+      }
+
+      .card {
+        padding: 21px;
       }
     }
   </style>
@@ -206,35 +327,89 @@
   <header>
     <h1>GRESLEY</h1>
     <p>The solo project of George Smith</p>
-    <a class="button" href="https://gresley.printify.me/" target="_blank">Shop Merch</a>
-    <img class="hero-poster" src="gresley-la-poster.jpg" alt="GRESLEY Los Angeles poster">
+
+    <div class="header-buttons">
+      <a
+        class="button"
+        href="https://fvr.fan/gresley/stunner"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Pre-Save “Stunner”
+      </a>
+
+      <a
+        class="button secondary"
+        href="https://gresley.printify.me/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Shop Merch
+      </a>
+    </div>
+
+    <img
+      class="hero-poster"
+      src="gresley-la-poster.jpg"
+      alt="GRESLEY Los Angeles concert poster"
+    />
   </header>
 
   <nav>
+    <a href="#latest">Latest</a>
     <a href="#about">About</a>
     <a href="#music">Music</a>
     <a href="#shows">Shows</a>
-    <a href="#video">Music Video</a>
+    <a href="#video">Video</a>
     <a href="#merch">Merch</a>
     <a href="#gallery">Gallery</a>
     <a href="#links">Links</a>
   </nav>
-  <section>
-<div class="card">
-  <h3>Latest Update</h3>
-  <p>
-    <strong>Songs I Wrote Since She Left</strong> has officially surpassed
-    <strong>Over 900,000 streams</strong> across all platforms.
-    Thank you to everyone listening.
-  </p>
-</div>
+
+  <section id="latest">
+    <div class="card latest-card">
+      <span class="update-badge">NEW SINGLE</span>
+
+      <h2>“Stunner” — Out August 7</h2>
+
+      <p>
+        GRESLEY has announced his first new release following his debut independent
+        album, <em>Songs I Wrote Since She Left</em>.
+      </p>
+
+      <p>
+        <strong>“Stunner” will be released on August 7, 2026.</strong>
+        The song has already become part of GRESLEY’s live shows and has been
+        performed five times.
+      </p>
+
+      <div class="album-milestone">
+        <strong>1 million streams:</strong>
+        <em>Songs I Wrote Since She Left</em> has now surpassed
+        1 million streams across all streaming platforms.
+      </div>
+
+      <a
+        class="button"
+        href="https://fvr.fan/gresley/stunner"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Pre-Save “Stunner”
+      </a>
+    </div>
   </section>
+
   <section id="about">
     <h2>About</h2>
 
     <div class="card">
       <h3>Who Is GRESLEY?</h3>
-      <img src="gresley-main-promo.jpg" alt="GRESLEY main promotional photo">
+
+      <img
+        src="gresley-main-promo.jpg"
+        alt="GRESLEY promotional portrait"
+      />
 
       <p>
         GRESLEY is the solo project of George Smith, a British singer, guitarist,
@@ -244,25 +419,60 @@
 
       <p>
         New Hope Club built a loyal fanbase through pop songs, harmonies, touring,
-        and online content. After the band broke up at the end of 2024, George began
-        a new chapter as a solo artist.
+        and online content. After the group broke up at the end of 2024, George
+        began a new chapter as a solo artist.
       </p>
 
       <p>
-        He chose the name <strong>GRESLEY</strong> because Gresley is his middle name.
+        He chose the name <strong>GRESLEY</strong> because Gresley is his middle
+        name, giving the solo project a personal connection to his identity.
       </p>
     </div>
 
     <div class="card">
       <h3>Quick Facts</h3>
+
       <div class="stats-grid">
-  <div class="stat-box"><strong>1</strong>Album</div>
-  <div class="stat-box"><strong>3</strong>Singles</div>
-  <div class="stat-box"><strong>6</strong>Shows Played</div>
-  <div class="stat-box"><strong>5</strong>Acoustic Shows</div>
-  <div class="stat-box"><strong>1</strong>Full-Band Show</div>
-  <div class="stat-box"><strong>0</strong>Upcoming Shows</div>
-</div>
+        <div class="stat-box">
+          <strong>1</strong>
+          Album
+        </div>
+
+        <div class="stat-box">
+          <strong>1M+</strong>
+          Album Streams
+        </div>
+
+        <div class="stat-box">
+          <strong>3</strong>
+          Released Singles
+        </div>
+
+        <div class="stat-box">
+          <strong>1</strong>
+          Upcoming Single
+        </div>
+
+        <div class="stat-box">
+          <strong>6</strong>
+          Shows Played
+        </div>
+
+        <div class="stat-box">
+          <strong>5</strong>
+          Acoustic Shows
+        </div>
+
+        <div class="stat-box">
+          <strong>1</strong>
+          Full-Band Show
+        </div>
+
+        <div class="stat-box">
+          <strong>0</strong>
+          Upcoming Shows
+        </div>
+      </div>
     </div>
   </section>
 
@@ -271,14 +481,24 @@
 
     <div class="card">
       <h3>Songs I Wrote Since She Left</h3>
-      <img src="album-cover.jpg" alt="Songs I Wrote Since She Left album cover">
+
+      <img
+        src="album-cover.jpg"
+        alt="Songs I Wrote Since She Left album cover"
+      />
 
       <p>
-        <strong>Songs I Wrote Since She Left</strong> is GRESLEY’s first album.
-        It was released on <strong>April 24, 2026</strong>.
+        <strong>Songs I Wrote Since She Left</strong> is GRESLEY’s debut
+        independent album. It was released on <strong>April 24, 2026</strong>.
       </p>
 
+      <div class="album-milestone">
+        The album has surpassed
+        <strong>1 million streams across all streaming platforms.</strong>
+      </div>
+
       <h3>Tracklist</h3>
+
       <ol>
         <li>Think of You</li>
         <li>Babyface</li>
@@ -295,16 +515,73 @@
 
     <div class="card">
       <h3>Singles</h3>
-      <ol>
-        <li><strong>How?</strong><br>Released January 29, 2026. The debut GRESLEY solo single.</li>
-        <li><strong>Babyface</strong><br>Released February 27, 2026. The second single.</li>
-        <li><strong>Think of You</strong><br>Released March 27, 2026. The third single.</li>
+
+      <ol class="release-list">
+        <li>
+          <strong>How?</strong><br />
+          Released January 29, 2026.<br />
+          The debut GRESLEY solo single.
+        </li>
+
+        <li>
+          <strong>Babyface</strong><br />
+          Released February 27, 2026.<br />
+          The second single from <em>Songs I Wrote Since She Left</em>.
+        </li>
+
+        <li>
+          <strong>Think of You</strong><br />
+          Released March 27, 2026.<br />
+          The third single from <em>Songs I Wrote Since She Left</em>.
+        </li>
+
+        <li>
+          <strong>Stunner</strong><br />
+          Releases August 7, 2026.<br />
+          The first new single following the debut album.
+
+          <p>
+            <a
+              class="button"
+              href="https://fvr.fan/gresley/stunner"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Pre-Save “Stunner”
+            </a>
+          </p>
+        </li>
       </ol>
     </div>
 
     <div class="card">
-      <h3>Unreleased Song</h3>
-      <p><strong>Stunna</strong> is a known unreleased song that has been performed live five times.</p>
+      <span class="update-badge">UPCOMING RELEASE</span>
+
+      <h3>Stunner</h3>
+
+      <p>
+        <strong>“Stunner”</strong> will be released on
+        <strong>August 7, 2026</strong>.
+      </p>
+
+      <p>
+        GRESLEY introduced the song during his recent live shows. Before its
+        official release, it had already been performed five times.
+      </p>
+
+      <p>
+        The single celebrates the debut album reaching 1 million streams and
+        begins the next chapter after <em>Songs I Wrote Since She Left</em>.
+      </p>
+
+      <a
+        class="button"
+        href="https://fvr.fan/gresley/stunner"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Pre-Save Now
+      </a>
     </div>
   </section>
 
@@ -313,18 +590,43 @@
 
     <div class="card">
       <h3>Show Stats</h3>
+
       <div class="stats-grid">
-      <div class="stat-box"><strong>6</strong>Shows Played</div>
-      <div class="stat-box"><strong>5</strong>Acoustic Shows</div>
-      <div class="stat-box"><strong>1</strong>Full-Band Show</div>
-      <div class="stat-box"><strong>17</strong>Songs Performed</div>
-      <div class="stat-box"><strong>4</strong>Countries Played</div>
-      <div class="stat-box"><strong>2026</strong>Solo Debut Year</div>
+        <div class="stat-box">
+          <strong>6</strong>
+          Shows Played
+        </div>
+
+        <div class="stat-box">
+          <strong>5</strong>
+          Acoustic Shows
+        </div>
+
+        <div class="stat-box">
+          <strong>1</strong>
+          Full-Band Show
+        </div>
+
+        <div class="stat-box">
+          <strong>17</strong>
+          Songs Performed
+        </div>
+
+        <div class="stat-box">
+          <strong>4</strong>
+          Countries Played
+        </div>
+
+        <div class="stat-box">
+          <strong>2026</strong>
+          Solo Debut Year
+        </div>
+      </div>
     </div>
-  </div>
 
     <div class="card">
       <h3>Most Played Songs Live</h3>
+
       <ol>
         <li>How? — 6</li>
         <li>Think of You — 6</li>
@@ -336,13 +638,14 @@
         <li>Break It — 5</li>
         <li>Loser — 5</li>
         <li>No Man Without My Woman — 5</li>
-        <li>Stunna — 5</li>
         <li>Remember — 5</li>
+        <li>Stunner — 5</li>
       </ol>
     </div>
 
     <div class="card">
       <h3>All Song Performance Counts</h3>
+
       <ol>
         <li>Babyface — 5</li>
         <li>Break It — 5</li>
@@ -357,7 +660,7 @@
         <li>Piece of Your Love — 6</li>
         <li>Remember — 5</li>
         <li>She’s My Girl (Interlude) — 6</li>
-        <li>Stunna — 5</li>
+        <li>Stunner — 5</li>
         <li>The Boys — 6</li>
         <li>Think of You — 6</li>
         <li>Wish You Were Here — 1</li>
@@ -365,125 +668,155 @@
     </div>
 
     <div class="card">
-  <h3>Setlist Archive</h3>
+      <h3>Setlist Archive</h3>
 
-  <details>
-    <summary>April 25, 2026 — The Palm & The Pine, Los Angeles, CA</summary>
-    <p>First small live set / soft launch. Acoustic show.</p>
-    <ol>
-      <li>How?</li>
-      <li>Think of You</li>
-      <li>She's My Girl (Interlude)</li>
-      <li>Missing You Already</li>
-      <li>The Boys</li>
-      <li>Piece of Your Love</li>
-    </ol>
-  </details>
+      <details>
+        <summary>
+          April 25, 2026 — The Palm & The Pine, Los Angeles, CA
+        </summary>
 
-  <details>
-    <summary>May 5, 2026 — The Castle Hotel, Manchester, England</summary>
-    <p>First proper UK tour show. Acoustic show.</p>
-    <ol>
-      <li>How?</li>
-      <li>Babyface</li>
-      <li>Loser</li>
-      <li>No Man Without My Woman</li>
-      <li>Think of You</li>
-      <li>Stunna — unreleased</li>
-      <li>Break It</li>
-      <li>She's My Girl (Interlude)</li>
-      <li>Remember — New Hope Club cover</li>
-      <li>Missing You Already</li>
-      <li>The Boys</li>
-      <li>Piece of Your Love</li>
-    </ol>
-  </details>
+        <p>First small live set / soft launch. Acoustic show.</p>
 
-  <details>
-    <summary>May 7, 2026 — Whelan's Upstairs, Dublin, Ireland</summary>
-    <p>Acoustic show.</p>
-    <ol>
-      <li>How?</li>
-      <li>Babyface</li>
-      <li>Loser</li>
-      <li>No Man Without My Woman</li>
-      <li>Think of You</li>
-      <li>Stunna — unreleased</li>
-      <li>Break It</li>
-      <li>She's My Girl (Interlude)</li>
-      <li>Remember — New Hope Club cover</li>
-      <li>Missing You Already</li>
-      <li>Cherry Wine — Hozier cover</li>
-      <li>The Boys</li>
-      <li>Piece of Your Love</li>
-    </ol>
-  </details>
+        <ol>
+          <li>How?</li>
+          <li>Think of You</li>
+          <li>She’s My Girl (Interlude)</li>
+          <li>Missing You Already</li>
+          <li>The Boys</li>
+          <li>Piece of Your Love</li>
+        </ol>
+      </details>
 
-  <details>
-    <summary>May 10, 2026 — The Attic at The Garage, Glasgow, Scotland</summary>
-    <p>Acoustic show.</p>
-    <ol>
-      <li>How?</li>
-      <li>Babyface</li>
-      <li>Loser</li>
-      <li>No Man Without My Woman</li>
-      <li>Think of You</li>
-      <li>Stunna — unreleased</li>
-      <li>Break It</li>
-      <li>She's My Girl (Interlude)</li>
-      <li>Remember — New Hope Club cover</li>
-      <li>Missing You Already</li>
-      <li>Last Request — Paolo Nutini cover</li>
-      <li>The Boys</li>
-      <li>Piece of Your Love</li>
-    </ol>
-  </details>
+      <details>
+        <summary>
+          May 5, 2026 — The Castle Hotel, Manchester, England
+        </summary>
 
-  <details>
-    <summary>May 12, 2026 — The Lower Third, London, England</summary>
-    <p>Acoustic show.</p>
-    <ol>
-      <li>How?</li>
-      <li>Babyface</li>
-      <li>Loser</li>
-      <li>No Man Without My Woman</li>
-      <li>Think of You</li>
-      <li>Stunna — unreleased</li>
-      <li>Break It</li>
-      <li>She's My Girl (Interlude)</li>
-      <li>Remember — New Hope Club cover</li>
-      <li>Missing You Already</li>
-      <li>Wish You Were Here — Pink Floyd cover/snippet</li>
-      <li>The Boys</li>
-      <li>Piece of Your Love</li>
-    </ol>
-  </details>
+        <p>First proper UK tour show. Acoustic show.</p>
 
-  <details open>
-    <summary>June 12, 2026 — El Cid, Los Angeles, CA ⭐ First Full-Band Show</summary>
-    <p>Full-band show with special guest Tor Miller.</p>
-    <ol>
-      <li>Think of You</li>
-      <li>Babyface</li>
-      <li>Loser</li>
-      <li>No Man Without My Woman</li>
-      <li>Stunna — unreleased</li>
-      <li>Break It</li>
-      <li>Hey Bulldog — The Beatles cover</li>
-      <li>Remember — New Hope Club cover</li>
-      <li>Missing You Already / California — Joni Mitchell interpolation</li>
-      <li>She's My Girl (Interlude)</li>
-      <li>How?</li>
-      <li>The Boys</li>
-      <li>Piece of Your Love</li>
-    </ol>
-  </details>
+        <ol>
+          <li>How?</li>
+          <li>Babyface</li>
+          <li>Loser</li>
+          <li>No Man Without My Woman</li>
+          <li>Think of You</li>
+          <li>Stunner — unreleased at the time</li>
+          <li>Break It</li>
+          <li>She’s My Girl (Interlude)</li>
+          <li>Remember — New Hope Club cover</li>
+          <li>Missing You Already</li>
+          <li>The Boys</li>
+          <li>Piece of Your Love</li>
+        </ol>
+      </details>
 
-</div>
+      <details>
+        <summary>
+          May 7, 2026 — Whelan’s Upstairs, Dublin, Ireland
+        </summary>
+
+        <p>Acoustic show.</p>
+
+        <ol>
+          <li>How?</li>
+          <li>Babyface</li>
+          <li>Loser</li>
+          <li>No Man Without My Woman</li>
+          <li>Think of You</li>
+          <li>Stunner — unreleased at the time</li>
+          <li>Break It</li>
+          <li>She’s My Girl (Interlude)</li>
+          <li>Remember — New Hope Club cover</li>
+          <li>Missing You Already</li>
+          <li>Cherry Wine — Hozier cover</li>
+          <li>The Boys</li>
+          <li>Piece of Your Love</li>
+        </ol>
+      </details>
+
+      <details>
+        <summary>
+          May 10, 2026 — The Attic at The Garage, Glasgow, Scotland
+        </summary>
+
+        <p>Acoustic show.</p>
+
+        <ol>
+          <li>How?</li>
+          <li>Babyface</li>
+          <li>Loser</li>
+          <li>No Man Without My Woman</li>
+          <li>Think of You</li>
+          <li>Stunner — unreleased at the time</li>
+          <li>Break It</li>
+          <li>She’s My Girl (Interlude)</li>
+          <li>Remember — New Hope Club cover</li>
+          <li>Missing You Already</li>
+          <li>Last Request — Paolo Nutini cover</li>
+          <li>The Boys</li>
+          <li>Piece of Your Love</li>
+        </ol>
+      </details>
+
+      <details>
+        <summary>
+          May 12, 2026 — The Lower Third, London, England
+        </summary>
+
+        <p>Acoustic show.</p>
+
+        <ol>
+          <li>How?</li>
+          <li>Babyface</li>
+          <li>Loser</li>
+          <li>No Man Without My Woman</li>
+          <li>Think of You</li>
+          <li>Stunner — unreleased at the time</li>
+          <li>Break It</li>
+          <li>She’s My Girl (Interlude)</li>
+          <li>Remember — New Hope Club cover</li>
+          <li>Missing You Already</li>
+          <li>Wish You Were Here — Pink Floyd cover/snippet</li>
+          <li>The Boys</li>
+          <li>Piece of Your Love</li>
+        </ol>
+      </details>
+
+      <details open>
+        <summary>
+          June 12, 2026 — El Cid, Los Angeles, CA ⭐ First Full-Band Show
+        </summary>
+
+        <p>Full-band show with special guest Tor Miller.</p>
+
+        <ol>
+          <li>Think of You</li>
+          <li>Babyface</li>
+          <li>Loser</li>
+          <li>No Man Without My Woman</li>
+          <li>Stunner — unreleased at the time</li>
+          <li>Break It</li>
+          <li>Hey Bulldog — The Beatles cover</li>
+          <li>Remember — New Hope Club cover</li>
+          <li>
+            Missing You Already / California — Joni Mitchell interpolation
+          </li>
+          <li>She’s My Girl (Interlude)</li>
+          <li>How?</li>
+          <li>The Boys</li>
+          <li>Piece of Your Love</li>
+        </ol>
+      </details>
+    </div>
 
     <div class="card">
       <h3>Los Angeles Poster</h3>
-      <img class="poster-img" src="gresley-la-poster.jpg" alt="GRESLEY Los Angeles show poster">
+
+      <img
+        class="poster-img"
+        src="gresley-la-poster.jpg"
+        alt="GRESLEY Los Angeles show poster"
+      />
     </div>
   </section>
 
@@ -496,13 +829,13 @@
       <iframe
         src="https://www.youtube.com/embed/D_oXgv7zf44"
         title="GRESLEY - Piece of Your Love Music Video"
-        frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
+        allowfullscreen
+      ></iframe>
 
       <p>
-        Watch the official music video for <strong>Piece of Your Love</strong>.
+        Watch the official music video for
+        <strong>“Piece of Your Love.”</strong>
       </p>
     </div>
   </section>
@@ -513,10 +846,18 @@
     <div class="card">
       <h3>Official GRESLEY Merch</h3>
 
-      <p>The official GRESLEY merch store includes items like the tote bag, tee, and denim cap.</p>
+      <p>
+        The official GRESLEY merch store includes items such as the tote bag,
+        tee, and denim cap.
+      </p>
 
       <p>
-        <a class="button" href="https://gresley.printify.me/" target="_blank">
+        <a
+          class="button"
+          href="https://gresley.printify.me/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Visit Merch Store
         </a>
       </p>
@@ -524,17 +865,29 @@
       <div class="merch-grid">
         <div class="merch-item">
           <h3>Tote Bag</h3>
-          <img src="gresley-tote-bag.jpg" alt="GRESLEY tote bag">
+
+          <img
+            src="gresley-tote-bag.jpg"
+            alt="Official GRESLEY tote bag"
+          />
         </div>
 
         <div class="merch-item">
           <h3>Tee</h3>
-          <img src="gresley-tee.jpg" alt="GRESLEY tee">
+
+          <img
+            src="gresley-tee.jpg"
+            alt="Official GRESLEY tee"
+          />
         </div>
 
         <div class="merch-item">
           <h3>Denim Cap</h3>
-          <img src="gresley-denim-cap.jpg" alt="GRESLEY denim cap">
+
+          <img
+            src="gresley-denim-cap.jpg"
+            alt="Official GRESLEY denim cap"
+          />
         </div>
       </div>
     </div>
@@ -546,32 +899,56 @@
     <div class="gallery-grid">
       <div class="gallery-item">
         <h3>Main Promo Photo</h3>
-        <img src="gresley-main-promo.jpg" alt="GRESLEY main promotional photo">
+
+        <img
+          src="gresley-main-promo.jpg"
+          alt="GRESLEY main promotional portrait"
+        />
       </div>
 
       <div class="gallery-item">
         <h3>Ocean Promo Photo</h3>
-        <img src="gresley-promo-photo.jpg" alt="GRESLEY ocean promotional photo">
+
+        <img
+          src="gresley-promo-photo.jpg"
+          alt="GRESLEY ocean promotional image"
+        />
       </div>
 
       <div class="gallery-item">
         <h3>Album Cover</h3>
-        <img src="album-cover.jpg" alt="Songs I Wrote Since She Left album cover">
+
+        <img
+          src="album-cover.jpg"
+          alt="Songs I Wrote Since She Left album cover"
+        />
       </div>
 
       <div class="gallery-item">
         <h3>Tracklist Artwork</h3>
-        <img src="album-tracklist-art.jpg" alt="Songs I Wrote Since She Left handwritten tracklist">
+
+        <img
+          src="album-tracklist-art.jpg"
+          alt="Songs I Wrote Since She Left handwritten tracklist artwork"
+        />
       </div>
 
       <div class="gallery-item">
         <h3>UK & Ireland Poster</h3>
-        <img src="uk-ireland-tour-poster.jpg" alt="GRESLEY UK and Ireland 2026 tour poster">
+
+        <img
+          src="uk-ireland-tour-poster.jpg"
+          alt="GRESLEY UK and Ireland 2026 tour poster"
+        />
       </div>
 
       <div class="gallery-item">
         <h3>Los Angeles Poster</h3>
-        <img src="gresley-la-poster.jpg" alt="GRESLEY Los Angeles show poster">
+
+        <img
+          src="gresley-la-poster.jpg"
+          alt="GRESLEY Los Angeles show poster"
+        />
       </div>
     </div>
   </section>
@@ -582,23 +959,122 @@
     <div class="card">
       <h3>Official Links</h3>
 
-      <p>Instagram: <a href="https://www.instagram.com/gresley" target="_blank">@gresley</a></p>
-      <p>TikTok: <a href="https://www.tiktok.com/@itsgresley" target="_blank">@itsgresley</a></p>
-      <p>YouTube: <a href="https://youtube.com/@gresleyofficial" target="_blank">@gresleyofficial</a></p>
-      <p>Merch Store: <a href="https://gresley.printify.me/" target="_blank">GRESLEY Merch</a></p>
+      <p>
+        Instagram:
+        <a
+          href="https://www.instagram.com/gresley"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          @gresley
+        </a>
+      </p>
+
+      <p>
+        TikTok:
+        <a
+          href="https://www.tiktok.com/@itsgresley"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          @itsgresley
+        </a>
+      </p>
+
+      <p>
+        YouTube:
+        <a
+          href="https://youtube.com/@gresleyofficial"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          @gresleyofficial
+        </a>
+      </p>
+
+      <p>
+        Pre-Save “Stunner”:
+        <a
+          href="https://fvr.fan/gresley/stunner"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          August 7 release
+        </a>
+      </p>
+
+      <p>
+        Merch Store:
+        <a
+          href="https://gresley.printify.me/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GRESLEY Merch
+        </a>
+      </p>
 
       <h3>Fan Community</h3>
-      <p>FVR Fan Hub: <a href="https://www.fvr.fan/gresley" target="_blank">Visit the GRESLEY Fan Hub</a></p>
-      <p>Discord: <a href="https://discord.gg/E4CUmUkh9V" target="_blank">Join the GRESLEY Discord</a></p>
-      <p>Live Show Archive: <a href="https://www.instagram.com/gresleylive" target="_blank">@gresleylive</a></p>
-      <p>Photo Dumps: <a href="https://www.instagram.com/gresleydumps/" target="_blank">@gresleydumps</a></p>
+
+      <p>
+        FVR Fan Hub:
+        <a
+          href="https://www.fvr.fan/gresley"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Visit the GRESLEY Fan Hub
+        </a>
+      </p>
+
+      <p>
+        Discord:
+        <a
+          href="https://discord.gg/E4CUmUkh9V"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Join the GRESLEY Discord
+        </a>
+      </p>
+
+      <p>
+        Live Show Archive:
+        <a
+          href="https://www.instagram.com/gresleylive"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          @gresleylive
+        </a>
+      </p>
+
+      <p>
+        Photo Dumps:
+        <a
+          href="https://www.instagram.com/gresleydumps/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          @gresleydumps
+        </a>
+      </p>
     </div>
   </section>
 
   <footer>
     <p>Fan-made page about George Smith / GRESLEY</p>
-    <p>Last updated: July 2, 2026</p>
+
+    <p>
+      <a href="#about">About</a> |
+      <a href="#music">Music</a> |
+      <a href="#shows">Shows</a> |
+      <a href="#links">Links</a>
+    </p>
+
+    <p>Last updated: July 23, 2026</p>
   </footer>
 
 </body>
 </html>
+```
