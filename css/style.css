@@ -623,36 +623,54 @@ button {
   border-radius: 6px;
 }
 
+#setlist {
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
+
+#setlist .section-heading {
+  margin-bottom: 28px;
+}
+
+#setlist .section-heading h2 {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+}
+
 .setlist {
-  max-width: 760px;
+  display: grid;
+  max-width: 900px;
   margin: 0;
   padding: 0;
-  border-top: 1px solid var(--border);
+  gap: 8px 18px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   list-style: none;
 }
 
 .setlist li {
   display: grid;
-  padding: 13px 8px;
-  border-bottom: 1px solid var(--border);
+  min-height: 48px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
   align-items: center;
-  gap: 14px;
-  grid-template-columns: 42px 1fr;
+  gap: 10px;
+  grid-template-columns: 30px 1fr;
 }
 
 .song-position {
   color: var(--muted);
-  font-size: 0.68rem;
+  font-size: 0.62rem;
   font-weight: 800;
 }
 
 .song-title {
-  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-size: 0.95rem;
   font-weight: 800;
-  line-height: 1.25;
+  line-height: 1.2;
 }
 
 .setlist-highlight {
+  border-color: var(--accent);
   background: var(--accent);
   color: #ffffff;
 }
@@ -937,7 +955,6 @@ button {
     min-height: auto;
   }
 }
-
 @media (max-width: 700px) {
   .container {
     width: min(calc(100% - 28px), var(--maximum-width));
@@ -953,67 +970,26 @@ button {
     padding-left: 14px;
   }
 
-  .hero-overlay {
-    background:
-      linear-gradient(
-        0deg,
-        rgba(0, 0, 0, 0.9) 0%,
-        rgba(0, 0, 0, 0.3) 78%
-      );
+  /* Other mobile code stays here */
+
+  #setlist {
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 
-  .hero-image {
-    object-position: center top;
-  }
-
-  .announcement-inner {
-    padding: 14px 0;
-    flex-direction: column;
-    gap: 5px;
-  }
-
-  .announcement-label {
-    margin-bottom: 3px;
-  }
-
-  .milestone-card {
+  .setlist {
+    gap: 7px;
     grid-template-columns: 1fr;
   }
 
-  .show-summary-grid,
-  .statistics-grid,
-  .merch-grid,
-  .music-grid,
-  .links-grid {
-    grid-template-columns: 1fr;
+  .setlist li {
+    min-height: 44px;
+    padding: 9px 10px;
+    grid-template-columns: 28px 1fr;
   }
 
-  .stat-card {
-    min-height: 180px;
-  }
-
-  .album-stat {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
- .setlist li {
-  padding: 11px 4px;
-  gap: 9px;
-  grid-template-columns: 34px 1fr;
-}
-
-.song-title {
-  font-size: 0.95rem;
-}
-
-  .link-card {
-    min-height: 76px;
-    padding: 14px 16px;
-  }
-
-  .link-card strong {
-    font-size: 1rem;
+  .song-title {
+    font-size: 0.9rem;
   }
 
   .footer-inner {
