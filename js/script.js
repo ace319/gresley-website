@@ -1,16 +1,33 @@
 "use strict";
 
 document.addEventListener("DOMContentLoaded", () => {
-  const menuButton = document.getElementById("menuButton");
-  const mainNavigation = document.getElementById("mainNavigation");
-  const navigationLinks = document.querySelectorAll(
-    "#mainNavigation a"
-  );
-  const backToTopButton = document.getElementById("backToTop");
-  const currentYear = document.getElementById("currentYear");
+  const menuButton =
+    document.getElementById("menuButton");
+
+  const mainNavigation =
+    document.getElementById("mainNavigation");
+
+  const navigationLinks =
+    document.querySelectorAll("#mainNavigation a");
+
+  const backToTopButton =
+    document.getElementById("backToTop");
+
+  const currentYear =
+    document.getElementById("currentYear");
+
+  const showArchiveButton =
+    document.getElementById("showArchiveButton");
+
+  const showArchive =
+    document.getElementById("showArchive");
+
+  const showArchiveLabel =
+    document.getElementById("showArchiveLabel");
 
   if (currentYear) {
-    currentYear.textContent = `© ${new Date().getFullYear()}`;
+    currentYear.textContent =
+      `© ${new Date().getFullYear()}`;
   }
 
   function closeMenu() {
@@ -21,7 +38,12 @@ document.addEventListener("DOMContentLoaded", () => {
     menuButton.classList.remove("active");
     mainNavigation.classList.remove("open");
     document.body.classList.remove("menu-open");
-    menuButton.setAttribute("aria-expanded", "false");
+
+    menuButton.setAttribute(
+      "aria-expanded",
+      "false"
+    );
+
     menuButton.setAttribute(
       "aria-label",
       "Open navigation menu"
@@ -33,7 +55,11 @@ document.addEventListener("DOMContentLoaded", () => {
       const menuIsOpen =
         mainNavigation.classList.toggle("open");
 
-      menuButton.classList.toggle("active", menuIsOpen);
+      menuButton.classList.toggle(
+        "active",
+        menuIsOpen
+      );
+
       document.body.classList.toggle(
         "menu-open",
         menuIsOpen
@@ -62,6 +88,41 @@ document.addEventListener("DOMContentLoaded", () => {
       closeMenu();
     }
   });
+
+  if (showArchiveButton && showArchive) {
+    showArchiveButton.addEventListener("click", () => {
+      const archiveIsOpen =
+        !showArchive.hasAttribute("hidden");
+
+      if (archiveIsOpen) {
+        showArchive.setAttribute("hidden", "");
+
+        if (showArchiveLabel) {
+          showArchiveLabel.textContent =
+            "Total shows — click to view";
+        }
+      } else {
+        showArchive.removeAttribute("hidden");
+
+        if (showArchiveLabel) {
+          showArchiveLabel.textContent =
+            "Total shows — click to hide";
+        }
+
+        window.setTimeout(() => {
+          showArchive.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
+        }, 100);
+      }
+
+      showArchiveButton.setAttribute(
+        "aria-expanded",
+        String(!archiveIsOpen)
+      );
+    });
+  }
 
   function updateBackToTopButton() {
     if (!backToTopButton) {
