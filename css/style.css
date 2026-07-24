@@ -793,28 +793,48 @@ button {
   border-radius: 6px;
 }
 
+#stats {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+#stats .section-heading {
+  margin-bottom: 30px;
+}
+
+#stats .section-heading h2 {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+}
+
 .statistics-grid {
   display: grid;
-  gap: 18px;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .statistic-panel {
-  min-height: 300px;
-  padding: clamp(30px, 5vw, 55px);
+  min-height: 190px;
+  padding: 22px;
   border: 1px solid var(--border);
   border-radius: 6px;
   background: rgba(255, 255, 255, 0.44);
 }
 
+.statistic-panel .stat-number {
+  font-size: clamp(2.8rem, 5vw, 4.2rem);
+}
+
 .statistic-panel h3 {
-  margin: 28px 0 12px;
-  font-size: 1.65rem;
+  margin: 18px 0 8px;
+  font-size: 1.05rem;
+  line-height: 1.2;
 }
 
 .statistic-panel p {
   margin: 0;
   color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.45;
 }
 
 .merch-grid {
