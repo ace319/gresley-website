@@ -1003,3 +1003,21 @@ button {
     animation-iteration-count: 1 !important;
   }
 }
+.merch-store-button {
+  margin-top: 35px;
+  text-align: center;
+}
+
+.video-information {
+  margin-top: 24px;
+}
+
+.video-information h3 {
+  margin: 0 0 8px;
+  font-size: 1.8rem;
+}
+
+.video-information p {
+  margin: 0;
+  color: var(--muted-light);
+}
