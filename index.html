@@ -1,1078 +1,613 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <meta
     name="description"
-    content="A fan-made archive dedicated to George Smith's solo project, GRESLEY."
-  />
+    content="An unofficial fan website celebrating GRESLEY, the solo music project of George Smith."
+  >
 
-  <title>GRESLEY | George Smith Fan Site</title>
+  <title>GRESLEY | Unofficial Fan Site</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 95px;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #070b18;
-      color: #f4f6ff;
-      line-height: 1.6;
-    }
-
-    header {
-      background:
-        linear-gradient(rgba(7, 11, 24, 0.35), rgba(7, 11, 24, 0.95)),
-        linear-gradient(135deg, #0c1533, #315eb8, #f3a6ff);
-      padding: 75px 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0 0 12px;
-      color: #ffffff;
-      font-size: clamp(3rem, 8vw, 5rem);
-      letter-spacing: 6px;
-    }
-
-    header p {
-      margin: 0 0 18px;
-      color: #e6e9ff;
-      font-size: 1.15rem;
-    }
-
-    .header-buttons {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 24px;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 10px 22px;
-      border-radius: 999px;
-      background: #f3a6ff;
-      color: #07102a;
-      font-weight: bold;
-      text-decoration: none;
-      transition: all 0.25s ease;
-    }
-
-    .button:hover {
-      background: #ffffff;
-      color: #315eb8;
-      transform: translateY(-2px);
-    }
-
-    .button.secondary {
-      background: transparent;
-      color: #ffffff;
-      border: 1px solid rgba(255, 255, 255, 0.55);
-    }
-
-    .button.secondary:hover {
-      background: #ffffff;
-      color: #315eb8;
-    }
-
-    .hero-poster {
-      width: 100%;
-      max-width: 340px;
-      display: block;
-      margin: 25px auto 0;
-      border-radius: 18px;
-      box-shadow: 0 16px 35px rgba(0, 0, 0, 0.35);
-    }
-
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      padding: 14px 20px;
-      text-align: center;
-      background: rgba(7, 11, 24, 0.95);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(243, 166, 255, 0.35);
-    }
-
-    nav a {
-      display: inline-block;
-      margin: 3px 6px;
-      padding: 8px 14px;
-      border-radius: 999px;
-      color: #f4f6ff;
-      font-size: 0.95rem;
-      font-weight: 700;
-      text-decoration: none;
-      transition: all 0.25s ease;
-    }
-
-    nav a:hover {
-      color: #ffffff;
-      background: linear-gradient(135deg, #315eb8, #f3a6ff);
-      box-shadow: 0 0 18px rgba(243, 166, 255, 0.45);
-      transform: translateY(-2px);
-    }
-
-    nav a:active {
-      transform: scale(0.95);
-    }
-
-    section {
-      max-width: 980px;
-      margin: auto;
-      padding: 45px 20px;
-    }
-
-    h2 {
-      margin-bottom: 18px;
-      color: #f3a6ff;
-      font-size: 2rem;
-      letter-spacing: 1px;
-    }
-
-    h3 {
-      margin-top: 0;
-      color: #ffffff;
-    }
-
-    h4 {
-      color: #dce3ff;
-    }
-
-    a {
-      color: #f3a6ff;
-    }
-
-    .card {
-      margin-top: 22px;
-      padding: 26px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 20px;
-      background: rgba(16, 25, 58, 0.9);
-      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
-    }
-
-    .latest-card {
-      border: 1px solid rgba(243, 166, 255, 0.5);
-      background:
-        linear-gradient(
-          135deg,
-          rgba(49, 94, 184, 0.34),
-          rgba(243, 166, 255, 0.16)
-        ),
-        rgba(16, 25, 58, 0.95);
-    }
-
-    .update-badge {
-      display: inline-block;
-      margin-bottom: 12px;
-      padding: 6px 12px;
-      border-radius: 999px;
-      background: #f3a6ff;
-      color: #07102a;
-      font-size: 0.78rem;
-      font-weight: 800;
-      letter-spacing: 1.5px;
-    }
-
-    .album-milestone {
-      margin: 18px 0;
-      padding: 16px;
-      border-left: 4px solid #f3a6ff;
-      border-radius: 10px;
-      background: rgba(8, 14, 33, 0.72);
-    }
-
-    img {
-      width: 100%;
-      max-width: 420px;
-      display: block;
-      margin: 20px auto;
-      border: none;
-      border-radius: 18px;
-      box-shadow: 0 16px 35px rgba(0, 0, 0, 0.35);
-    }
-
-    .poster-img {
-      max-width: 540px;
-    }
-
-    .stats-grid,
-    .merch-grid,
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-      gap: 16px;
-    }
-
-    .stat-box,
-    .merch-item,
-    .gallery-item {
-      padding: 20px;
-      border: 1px solid rgba(243, 166, 255, 0.25);
-      border-radius: 18px;
-      background: rgba(8, 14, 33, 0.85);
-      text-align: center;
-    }
-
-    .stat-box strong {
-      display: block;
-      color: #ffffff;
-      font-size: 2rem;
-    }
-
-    .merch-item img,
-    .gallery-item img {
-      max-width: 260px;
-      background: #ffffff;
-    }
-
-    iframe {
-      width: 100%;
-      height: 400px;
-      border: 0;
-      border-radius: 18px;
-      box-shadow: 0 16px 35px rgba(0, 0, 0, 0.35);
-    }
-
-    details {
-      margin: 14px 0;
-      padding: 16px 20px;
-      border: 1px solid rgba(243, 166, 255, 0.25);
-      border-radius: 16px;
-      background: rgba(8, 14, 33, 0.85);
-    }
-
-    summary {
-      cursor: pointer;
-      color: #ffffff;
-      font-weight: bold;
-    }
-
-    details[open] summary {
-      color: #f3a6ff;
-    }
-
-    li {
-      margin-bottom: 6px;
-    }
-
-    .release-list li {
-      margin-bottom: 22px;
-    }
-
-    .small-note {
-      color: #cfd4ff;
-      font-size: 0.92rem;
-    }
-
-    footer {
-      padding: 28px;
-      border-top: 1px solid rgba(243, 166, 255, 0.35);
-      background: #050812;
-      color: #cfd4ff;
-      text-align: center;
-    }
-
-    footer a {
-      margin: 0 6px;
-      text-decoration: none;
-    }
-
-    @media (max-width: 700px) {
-      header {
-        padding: 60px 16px;
-      }
-
-      nav {
-        padding: 10px;
-      }
-
-      nav a {
-        margin: 5px 3px;
-        padding: 7px 10px;
-        font-size: 0.88rem;
-      }
-
-      section {
-        padding: 38px 16px;
-      }
-
-      iframe {
-        height: 250px;
-      }
-
-      .card {
-        padding: 21px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-
-  <header>
-    <h1>GRESLEY</h1>
-    <p>The solo project of George Smith</p>
-
-    <div class="header-buttons">
-      <a
-        class="button"
-        href="https://fvr.fan/gresley/stunner"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Pre-Save “Stunner”
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#home" class="site-logo" aria-label="GRESLEY home">
+        GRESLEY
       </a>
 
-      <a
-        class="button secondary"
-        href="https://gresley.printify.me/"
-        target="_blank"
-        rel="noopener noreferrer"
+      <button
+        class="menu-button"
+        id="menuButton"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="mainNavigation"
       >
-        Shop Merch
-      </a>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav
+        class="main-navigation"
+        id="mainNavigation"
+        aria-label="Main navigation"
+      >
+        <a href="#news">News</a>
+        <a href="#about">About</a>
+        <a href="#music">Music</a>
+        <a href="#shows">Shows</a>
+        <a href="#setlist">Setlist</a>
+        <a href="#stats">Stats</a>
+        <a href="#merch">Merch</a>
+        <a href="#links">Links</a>
+      </nav>
     </div>
-
-    <img
-      class="hero-poster"
-      src="gresley-la-poster.jpg"
-      alt="GRESLEY Los Angeles concert poster"
-    />
   </header>
 
-  <nav>
-    <a href="#latest">Latest</a>
-    <a href="#about">About</a>
-    <a href="#music">Music</a>
-    <a href="#shows">Shows</a>
-    <a href="#video">Video</a>
-    <a href="#merch">Merch</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#links">Links</a>
-  </nav>
-
-  <section id="latest">
-    <div class="card latest-card">
-      <span class="update-badge">NEW SINGLE</span>
-
-      <h2>“Stunner” — Out August 7</h2>
-
-      <p>
-        GRESLEY has announced his first new release following his debut independent
-        album, <em>Songs I Wrote Since She Left</em>.
-      </p>
-
-      <p>
-        <strong>“Stunner” will be released on August 7, 2026.</strong>
-        The song has already become part of GRESLEY’s live shows and has been
-        performed five times.
-      </p>
-
-      <div class="album-milestone">
-        <strong>1 million streams:</strong>
-        <em>Songs I Wrote Since She Left</em> has now surpassed
-        1 million streams across all streaming platforms.
-      </div>
-
-      <a
-        class="button"
-        href="https://fvr.fan/gresley/stunner"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Pre-Save “Stunner”
-      </a>
-    </div>
-  </section>
-
-  <section id="about">
-    <h2>About</h2>
-
-    <div class="card">
-      <h3>Who Is GRESLEY?</h3>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-overlay"></div>
 
       <img
-        src="gresley-main-promo.jpg"
+        class="hero-image"
+        src="images/gresley-main-promo.jpg"
         alt="GRESLEY promotional portrait"
-      />
-
-      <p>
-        GRESLEY is the solo project of George Smith, a British singer, guitarist,
-        pianist, and songwriter. He first became known as a member of New Hope Club,
-        alongside Blake Richardson and Reece Bibby.
-      </p>
-
-      <p>
-        New Hope Club built a loyal fanbase through pop songs, harmonies, touring,
-        and online content. After the group broke up at the end of 2024, George
-        began a new chapter as a solo artist.
-      </p>
-
-      <p>
-        He chose the name <strong>GRESLEY</strong> because Gresley is his middle
-        name, giving the solo project a personal connection to his identity.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Quick Facts</h3>
-
-      <div class="stats-grid">
-        <div class="stat-box">
-          <strong>1</strong>
-          Album
-        </div>
-
-        <div class="stat-box">
-          <strong>1M+</strong>
-          Album Streams
-        </div>
-
-        <div class="stat-box">
-          <strong>3</strong>
-          Released Singles
-        </div>
-
-        <div class="stat-box">
-          <strong>1</strong>
-          Upcoming Single
-        </div>
-
-        <div class="stat-box">
-          <strong>6</strong>
-          Shows Played
-        </div>
-
-        <div class="stat-box">
-          <strong>5</strong>
-          Acoustic Shows
-        </div>
-
-        <div class="stat-box">
-          <strong>1</strong>
-          Full-Band Show
-        </div>
-
-        <div class="stat-box">
-          <strong>0</strong>
-          Upcoming Shows
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="music">
-    <h2>Music</h2>
-
-    <div class="card">
-      <h3>Songs I Wrote Since She Left</h3>
-
-      <img
-        src="album-cover.jpg"
-        alt="Songs I Wrote Since She Left album cover"
-      />
-
-      <p>
-        <strong>Songs I Wrote Since She Left</strong> is GRESLEY’s debut
-        independent album. It was released on <strong>April 24, 2026</strong>.
-      </p>
-
-      <div class="album-milestone">
-        The album has surpassed
-        <strong>1 million streams across all streaming platforms.</strong>
-      </div>
-
-      <h3>Tracklist</h3>
-
-      <ol>
-        <li>Think of You</li>
-        <li>Babyface</li>
-        <li>How?</li>
-        <li>Piece of Your Love</li>
-        <li>No Man Without My Woman</li>
-        <li>Loser</li>
-        <li>She’s My Girl (Interlude)</li>
-        <li>Break It</li>
-        <li>Missing You Already</li>
-        <li>The Boys</li>
-      </ol>
-    </div>
-
-    <div class="card">
-      <h3>Singles</h3>
-
-      <ol class="release-list">
-        <li>
-          <strong>How?</strong><br />
-          Released January 29, 2026.<br />
-          The debut GRESLEY solo single.
-        </li>
-
-        <li>
-          <strong>Babyface</strong><br />
-          Released February 27, 2026.<br />
-          The second single from <em>Songs I Wrote Since She Left</em>.
-        </li>
-
-        <li>
-          <strong>Think of You</strong><br />
-          Released March 27, 2026.<br />
-          The third single from <em>Songs I Wrote Since She Left</em>.
-        </li>
-
-        <li>
-          <strong>Stunner</strong><br />
-          Releases August 7, 2026.<br />
-          The first new single following the debut album.
-
-          <p>
-            <a
-              class="button"
-              href="https://fvr.fan/gresley/stunner"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Pre-Save “Stunner”
-            </a>
-          </p>
-        </li>
-      </ol>
-    </div>
-
-    <div class="card">
-      <span class="update-badge">UPCOMING RELEASE</span>
-
-      <h3>Stunner</h3>
-
-      <p>
-        <strong>“Stunner”</strong> will be released on
-        <strong>August 7, 2026</strong>.
-      </p>
-
-      <p>
-        GRESLEY introduced the song during his recent live shows. Before its
-        official release, it had already been performed five times.
-      </p>
-
-      <p>
-        The single celebrates the debut album reaching 1 million streams and
-        begins the next chapter after <em>Songs I Wrote Since She Left</em>.
-      </p>
-
-      <a
-        class="button"
-        href="https://fvr.fan/gresley/stunner"
-        target="_blank"
-        rel="noopener noreferrer"
       >
-        Pre-Save Now
-      </a>
-    </div>
-  </section>
 
-  <section id="shows">
-    <h2>Shows</h2>
+      <div class="hero-content">
+        <p class="eyebrow">The unofficial fan site</p>
 
-    <div class="card">
-      <h3>Show Stats</h3>
+        <h1>GRESLEY</h1>
 
-      <div class="stats-grid">
-        <div class="stat-box">
-          <strong>6</strong>
-          Shows Played
-        </div>
+        <p class="hero-description">
+          Music, shows, statistics, photos and updates from the solo project
+          of George Smith.
+        </p>
 
-        <div class="stat-box">
-          <strong>5</strong>
-          Acoustic Shows
-        </div>
+        <div class="hero-buttons">
+          <a
+            class="button button-primary"
+            href="https://fvr.fan/gresley/stunner"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Pre-save Stunner
+          </a>
 
-        <div class="stat-box">
-          <strong>1</strong>
-          Full-Band Show
-        </div>
-
-        <div class="stat-box">
-          <strong>17</strong>
-          Songs Performed
-        </div>
-
-        <div class="stat-box">
-          <strong>4</strong>
-          Countries Played
-        </div>
-
-        <div class="stat-box">
-          <strong>2026</strong>
-          Solo Debut Year
+          <a class="button button-secondary" href="#news">
+            Latest News
+          </a>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="card">
-      <h3>Most Played Songs Live</h3>
+    <section class="announcement-banner">
+      <div class="container announcement-inner">
+        <span class="announcement-label">New single</span>
 
-      <ol>
-        <li>How? — 6</li>
-        <li>Think of You — 6</li>
-        <li>Piece of Your Love — 6</li>
-        <li>Missing You Already — 6</li>
-        <li>The Boys — 6</li>
-        <li>She’s My Girl (Interlude) — 6</li>
-        <li>Babyface — 5</li>
-        <li>Break It — 5</li>
-        <li>Loser — 5</li>
-        <li>No Man Without My Woman — 5</li>
-        <li>Remember — 5</li>
-        <li>Stunner — 5</li>
-      </ol>
-    </div>
+        <p>
+          <strong>Stunner</strong> arrives August 7, 2026.
+        </p>
 
-    <div class="card">
-      <h3>All Song Performance Counts</h3>
-
-      <ol>
-        <li>Babyface — 5</li>
-        <li>Break It — 5</li>
-        <li>California — 1</li>
-        <li>Cherry Wine — 1</li>
-        <li>Hey Bulldog — 1</li>
-        <li>How? — 6</li>
-        <li>Last Request — 1</li>
-        <li>Loser — 5</li>
-        <li>Missing You Already — 6</li>
-        <li>No Man Without My Woman — 5</li>
-        <li>Piece of Your Love — 6</li>
-        <li>Remember — 5</li>
-        <li>She’s My Girl (Interlude) — 6</li>
-        <li>Stunner — 5</li>
-        <li>The Boys — 6</li>
-        <li>Think of You — 6</li>
-        <li>Wish You Were Here — 1</li>
-      </ol>
-    </div>
-
-    <div class="card">
-      <h3>Setlist Archive</h3>
-
-      <details>
-        <summary>
-          April 25, 2026 — The Palm & The Pine, Los Angeles, CA
-        </summary>
-
-        <p>First small live set / soft launch. Acoustic show.</p>
-
-        <ol>
-          <li>How?</li>
-          <li>Think of You</li>
-          <li>She’s My Girl (Interlude)</li>
-          <li>Missing You Already</li>
-          <li>The Boys</li>
-          <li>Piece of Your Love</li>
-        </ol>
-      </details>
-
-      <details>
-        <summary>
-          May 5, 2026 — The Castle Hotel, Manchester, England
-        </summary>
-
-        <p>First proper UK tour show. Acoustic show.</p>
-
-        <ol>
-          <li>How?</li>
-          <li>Babyface</li>
-          <li>Loser</li>
-          <li>No Man Without My Woman</li>
-          <li>Think of You</li>
-          <li>Stunner — unreleased at the time</li>
-          <li>Break It</li>
-          <li>She’s My Girl (Interlude)</li>
-          <li>Remember — New Hope Club cover</li>
-          <li>Missing You Already</li>
-          <li>The Boys</li>
-          <li>Piece of Your Love</li>
-        </ol>
-      </details>
-
-      <details>
-        <summary>
-          May 7, 2026 — Whelan’s Upstairs, Dublin, Ireland
-        </summary>
-
-        <p>Acoustic show.</p>
-
-        <ol>
-          <li>How?</li>
-          <li>Babyface</li>
-          <li>Loser</li>
-          <li>No Man Without My Woman</li>
-          <li>Think of You</li>
-          <li>Stunner — unreleased at the time</li>
-          <li>Break It</li>
-          <li>She’s My Girl (Interlude)</li>
-          <li>Remember — New Hope Club cover</li>
-          <li>Missing You Already</li>
-          <li>Cherry Wine — Hozier cover</li>
-          <li>The Boys</li>
-          <li>Piece of Your Love</li>
-        </ol>
-      </details>
-
-      <details>
-        <summary>
-          May 10, 2026 — The Attic at The Garage, Glasgow, Scotland
-        </summary>
-
-        <p>Acoustic show.</p>
-
-        <ol>
-          <li>How?</li>
-          <li>Babyface</li>
-          <li>Loser</li>
-          <li>No Man Without My Woman</li>
-          <li>Think of You</li>
-          <li>Stunner — unreleased at the time</li>
-          <li>Break It</li>
-          <li>She’s My Girl (Interlude)</li>
-          <li>Remember — New Hope Club cover</li>
-          <li>Missing You Already</li>
-          <li>Last Request — Paolo Nutini cover</li>
-          <li>The Boys</li>
-          <li>Piece of Your Love</li>
-        </ol>
-      </details>
-
-      <details>
-        <summary>
-          May 12, 2026 — The Lower Third, London, England
-        </summary>
-
-        <p>Acoustic show.</p>
-
-        <ol>
-          <li>How?</li>
-          <li>Babyface</li>
-          <li>Loser</li>
-          <li>No Man Without My Woman</li>
-          <li>Think of You</li>
-          <li>Stunner — unreleased at the time</li>
-          <li>Break It</li>
-          <li>She’s My Girl (Interlude)</li>
-          <li>Remember — New Hope Club cover</li>
-          <li>Missing You Already</li>
-          <li>Wish You Were Here — Pink Floyd cover/snippet</li>
-          <li>The Boys</li>
-          <li>Piece of Your Love</li>
-        </ol>
-      </details>
-
-      <details open>
-        <summary>
-          June 12, 2026 — El Cid, Los Angeles, CA ⭐ First Full-Band Show
-        </summary>
-
-        <p>Full-band show with special guest Tor Miller.</p>
-
-        <ol>
-          <li>Think of You</li>
-          <li>Babyface</li>
-          <li>Loser</li>
-          <li>No Man Without My Woman</li>
-          <li>Stunner — unreleased at the time</li>
-          <li>Break It</li>
-          <li>Hey Bulldog — The Beatles cover</li>
-          <li>Remember — New Hope Club cover</li>
-          <li>
-            Missing You Already / California — Joni Mitchell interpolation
-          </li>
-          <li>She’s My Girl (Interlude)</li>
-          <li>How?</li>
-          <li>The Boys</li>
-          <li>Piece of Your Love</li>
-        </ol>
-      </details>
-    </div>
-
-    <div class="card">
-      <h3>Los Angeles Poster</h3>
-
-      <img
-        class="poster-img"
-        src="gresley-la-poster.jpg"
-        alt="GRESLEY Los Angeles show poster"
-      />
-    </div>
-  </section>
-
-  <section id="video">
-    <h2>Music Video</h2>
-
-    <div class="card">
-      <h3>Piece of Your Love — Official Music Video</h3>
-
-      <iframe
-        src="https://www.youtube.com/embed/D_oXgv7zf44"
-        title="GRESLEY - Piece of Your Love Music Video"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
-
-      <p>
-        Watch the official music video for
-        <strong>“Piece of Your Love.”</strong>
-      </p>
-    </div>
-  </section>
-
-  <section id="merch">
-    <h2>Merch</h2>
-
-    <div class="card">
-      <h3>Official GRESLEY Merch</h3>
-
-      <p>
-        The official GRESLEY merch store includes items such as the tote bag,
-        tee, and denim cap.
-      </p>
-
-      <p>
-        <a
-          class="button"
-          href="https://gresley.printify.me/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Visit Merch Store
-        </a>
-      </p>
-
-      <div class="merch-grid">
-        <div class="merch-item">
-          <h3>Tote Bag</h3>
-
-          <img
-            src="gresley-tote-bag.jpg"
-            alt="Official GRESLEY tote bag"
-          />
-        </div>
-
-        <div class="merch-item">
-          <h3>Tee</h3>
-
-          <img
-            src="gresley-tee.jpg"
-            alt="Official GRESLEY tee"
-          />
-        </div>
-
-        <div class="merch-item">
-          <h3>Denim Cap</h3>
-
-          <img
-            src="gresley-denim-cap.jpg"
-            alt="Official GRESLEY denim cap"
-          />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="gallery">
-    <h2>Gallery</h2>
-
-    <div class="gallery-grid">
-      <div class="gallery-item">
-        <h3>Main Promo Photo</h3>
-
-        <img
-          src="gresley-main-promo.jpg"
-          alt="GRESLEY main promotional portrait"
-        />
-      </div>
-
-      <div class="gallery-item">
-        <h3>Ocean Promo Photo</h3>
-
-        <img
-          src="gresley-promo-photo.jpg"
-          alt="GRESLEY ocean promotional image"
-        />
-      </div>
-
-      <div class="gallery-item">
-        <h3>Album Cover</h3>
-
-        <img
-          src="album-cover.jpg"
-          alt="Songs I Wrote Since She Left album cover"
-        />
-      </div>
-
-      <div class="gallery-item">
-        <h3>Tracklist Artwork</h3>
-
-        <img
-          src="album-tracklist-art.jpg"
-          alt="Songs I Wrote Since She Left handwritten tracklist artwork"
-        />
-      </div>
-
-      <div class="gallery-item">
-        <h3>UK & Ireland Poster</h3>
-
-        <img
-          src="uk-ireland-tour-poster.jpg"
-          alt="GRESLEY UK and Ireland 2026 tour poster"
-        />
-      </div>
-
-      <div class="gallery-item">
-        <h3>Los Angeles Poster</h3>
-
-        <img
-          src="gresley-la-poster.jpg"
-          alt="GRESLEY Los Angeles show poster"
-        />
-      </div>
-    </div>
-  </section>
-
-  <section id="links">
-    <h2>Links</h2>
-
-    <div class="card">
-      <h3>Official Links</h3>
-
-      <p>
-        Instagram:
-        <a
-          href="https://www.instagram.com/gresley"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          @gresley
-        </a>
-      </p>
-
-      <p>
-        TikTok:
-        <a
-          href="https://www.tiktok.com/@itsgresley"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          @itsgresley
-        </a>
-      </p>
-
-      <p>
-        YouTube:
-        <a
-          href="https://youtube.com/@gresleyofficial"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          @gresleyofficial
-        </a>
-      </p>
-
-      <p>
-        Pre-Save “Stunner”:
         <a
           href="https://fvr.fan/gresley/stunner"
           target="_blank"
           rel="noopener noreferrer"
         >
-          August 7 release
+          Pre-save now
         </a>
-      </p>
+      </div>
+    </section>
+
+    <section class="section" id="news">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Latest update</p>
+          <h2>Stunner is coming</h2>
+        </div>
+
+        <div class="featured-card">
+          <div class="featured-card-image">
+            <img
+              src="images/gresley-la-poster.jpg"
+              alt="GRESLEY promotional artwork"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="featured-card-content">
+            <span class="tag">August 7, 2026</span>
+
+            <h3>GRESLEY announces new single “Stunner”</h3>
+
+            <p>
+              GRESLEY will release his first post-album single,
+              <strong>Stunner</strong>, on August 7, 2026.
+            </p>
+
+            <p>
+              The song has already appeared during recent live performances
+              and follows the release of his debut independent album,
+              <em>Songs I Wrote Since She Left</em>.
+            </p>
+
+            <a
+              class="button button-primary"
+              href="https://fvr.fan/gresley/stunner"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Pre-save Stunner
+            </a>
+          </div>
+        </div>
+
+        <div class="milestone-card">
+          <div class="milestone-number">1M+</div>
+
+          <div>
+            <p class="eyebrow">Album milestone</p>
+
+            <h3>More than one million streams</h3>
+
+            <p>
+              <em>Songs I Wrote Since She Left</em> has surpassed one million
+              streams across all streaming platforms.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="about">
+      <div class="container about-grid">
+        <div class="about-image-wrap">
+          <img
+            class="about-image"
+            src="images/gresley-promo-photo.jpg"
+            alt="GRESLEY promotional photograph"
+            loading="lazy"
+          >
+        </div>
+
+        <div class="about-content">
+          <p class="eyebrow">About the artist</p>
+
+          <h2>Who is GRESLEY?</h2>
+
+          <p>
+            GRESLEY is the solo music project of George Smith. The project
+            takes its name from George’s middle name.
+          </p>
+
+          <p>
+            George was previously a member of New Hope Club. Following the
+            end of the band at the conclusion of 2024, he began releasing
+            music independently as GRESLEY.
+          </p>
+
+          <p>
+            His solo work combines guitar-driven pop, rock influences and
+            personal songwriting, with live performances ranging from
+            intimate acoustic shows to full-band concerts.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="music">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Discography</p>
+          <h2>Music</h2>
+        </div>
+
+        <article class="album-feature">
+          <div class="album-cover-wrap">
+            <img
+              class="album-cover"
+              src="images/album-cover.jpg"
+              alt="Songs I Wrote Since She Left album cover"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="album-information">
+            <span class="tag">Debut independent album</span>
+
+            <h3>Songs I Wrote Since She Left</h3>
+
+            <p>
+              The debut album from GRESLEY has now surpassed one million
+              combined streams across streaming platforms.
+            </p>
+
+            <div class="album-stat">
+              <span>Streams</span>
+              <strong>1,000,000+</strong>
+            </div>
+          </div>
+        </article>
+
+        <div class="tracklist-art">
+          <img
+            src="images/album-tracklist-art.jpg"
+            alt="Songs I Wrote Since She Left tracklist artwork"
+            loading="lazy"
+          >
+        </div>
+
+        <div class="section-subheading">
+          <h3>Singles</h3>
+        </div>
+
+        <div class="music-grid">
+          <article class="music-card">
+            <span class="music-number">01</span>
+            <h4>How?</h4>
+            <p>Released January 29, 2026</p>
+          </article>
+
+          <article class="music-card">
+            <span class="music-number">02</span>
+            <h4>Babyface</h4>
+            <p>Released February 27, 2026</p>
+          </article>
+
+          <article class="music-card">
+            <span class="music-number">03</span>
+            <h4>Think of You</h4>
+            <p>Released March 27, 2026</p>
+          </article>
+
+          <article class="music-card highlighted-card">
+            <span class="music-number">04</span>
+            <h4>Stunner</h4>
+            <p>Releasing August 7, 2026</p>
+
+            <a
+              href="https://fvr.fan/gresley/stunner"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Pre-save
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="shows">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Live history</p>
+          <h2>Shows</h2>
+        </div>
+
+        <div class="show-summary-grid">
+          <article class="stat-card">
+            <span class="stat-number">6</span>
+            <span class="stat-label">Total shows</span>
+          </article>
+
+          <article class="stat-card">
+            <span class="stat-number">5</span>
+            <span class="stat-label">Acoustic shows</span>
+          </article>
+
+          <article class="stat-card">
+            <span class="stat-number">1</span>
+            <span class="stat-label">Full-band show</span>
+          </article>
+        </div>
+
+        <article class="show-feature">
+          <div class="show-poster">
+            <img
+              src="images/el-cid-poster.jpg"
+              alt="GRESLEY El Cid Los Angeles concert poster"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="show-information">
+            <span class="tag">First full-band show</span>
+
+            <h3>El Cid, Los Angeles</h3>
+
+            <p class="show-date">June 12, 2026</p>
+
+            <p>
+              GRESLEY performed his first full-band solo concert at El Cid in
+              Los Angeles, marking a major new stage in the project’s live
+              development.
+            </p>
+          </div>
+        </article>
+
+        <div class="tour-poster">
+          <img
+            src="images/uk-ireland-tour-poster.jpg"
+            alt="GRESLEY UK and Ireland tour poster"
+            loading="lazy"
+          >
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="setlist">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">El Cid, Los Angeles</p>
+          <h2>Latest setlist</h2>
+          <p class="section-introduction">June 12, 2026</p>
+        </div>
+
+        <ol class="setlist">
+          <li>
+            <span class="song-position">01</span>
+            <span class="song-title">Think of You</span>
+          </li>
+
+          <li>
+            <span class="song-position">02</span>
+            <span class="song-title">Babyface</span>
+          </li>
+
+          <li>
+            <span class="song-position">03</span>
+            <span class="song-title">Loser</span>
+          </li>
+
+          <li>
+            <span class="song-position">04</span>
+            <span class="song-title">No Man Without My Woman</span>
+          </li>
+
+          <li class="setlist-highlight">
+            <span class="song-position">05</span>
+            <span class="song-title">Stunner</span>
+          </li>
+
+          <li>
+            <span class="song-position">06</span>
+            <span class="song-title">Break It</span>
+          </li>
+
+          <li>
+            <span class="song-position">07</span>
+            <span class="song-title">Hey Bulldog</span>
+          </li>
+
+          <li>
+            <span class="song-position">08</span>
+            <span class="song-title">Remember</span>
+          </li>
+
+          <li>
+            <span class="song-position">09</span>
+            <span class="song-title">
+              Missing You Already / California
+            </span>
+          </li>
+
+          <li>
+            <span class="song-position">10</span>
+            <span class="song-title">She’s My Girl (Interlude)</span>
+          </li>
+
+          <li>
+            <span class="song-position">11</span>
+            <span class="song-title">How?</span>
+          </li>
+
+          <li>
+            <span class="song-position">12</span>
+            <span class="song-title">The Boys</span>
+          </li>
+
+          <li>
+            <span class="song-position">13</span>
+            <span class="song-title">Piece of Your Love</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="stats">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">By the numbers</p>
+          <h2>Performance statistics</h2>
+        </div>
+
+        <div class="statistics-grid">
+          <article class="statistic-panel">
+            <span class="stat-number">13</span>
+            <h3>Songs performed</h3>
+            <p>
+              Thirteen songs appeared in the first full-band GRESLEY set.
+            </p>
+          </article>
+
+          <article class="statistic-panel">
+            <span class="stat-number">6</span>
+            <h3>Solo shows</h3>
+            <p>
+              Six known GRESLEY performances have taken place so far.
+            </p>
+          </article>
+
+          <article class="statistic-panel">
+            <span class="stat-number">1</span>
+            <h3>Full-band performance</h3>
+            <p>
+              The June 12 El Cid show was the first concert with a full band.
+            </p>
+          </article>
+
+          <article class="statistic-panel">
+            <span class="stat-number">1M+</span>
+            <h3>Album streams</h3>
+            <p>
+              The debut album has passed one million total streams.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="merch">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Official items</p>
+          <h2>Merchandise</h2>
+        </div>
+
+        <div class="merch-grid">
+          <article class="merch-card">
+            <div class="merch-image-wrap">
+              <img
+                src="images/gresley-tee.jpg"
+                alt="GRESLEY T-shirt"
+                loading="lazy"
+              >
+            </div>
+
+            <h3>GRESLEY T-shirt</h3>
+          </article>
+
+          <article class="merch-card">
+            <div class="merch-image-wrap">
+              <img
+                src="images/gresley-denim-cap.jpg"
+                alt="GRESLEY denim cap"
+                loading="lazy"
+              >
+            </div>
+
+            <h3>GRESLEY denim cap</h3>
+          </article>
+
+          <article class="merch-card">
+            <div class="merch-image-wrap">
+              <img
+                src="images/gresley-tote-bag.jpg"
+                alt="GRESLEY tote bag"
+                loading="lazy"
+              >
+            </div>
+
+            <h3>GRESLEY tote bag</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="video">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Watch</p>
+          <h2>Music video</h2>
+        </div>
+
+        <div class="video-placeholder">
+          <div>
+            <p>
+              Add the official YouTube video here when you have the exact
+              video link.
+            </p>
+
+            <p class="video-code-example">
+              Replace this box with a YouTube iframe.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="links">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Follow and listen</p>
+          <h2>Fan links</h2>
+        </div>
+
+        <div class="links-grid">
+          <a
+            class="link-card"
+            href="https://fvr.fan/gresley/stunner"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>Pre-save</span>
+            <strong>Stunner</strong>
+          </a>
+
+          <a
+            class="link-card"
+            href="#music"
+          >
+            <span>Explore</span>
+            <strong>Music</strong>
+          </a>
+
+          <a
+            class="link-card"
+            href="#shows"
+          >
+            <span>View</span>
+            <strong>Shows</strong>
+          </a>
+
+          <a
+            class="link-card"
+            href="#setlist"
+          >
+            <span>Read</span>
+            <strong>Setlists</strong>
+          </a>
+        </div>
+
+        <p class="disclaimer">
+          This is an unofficial fan-created website and is not affiliated with
+          GRESLEY, George Smith, his management or record distribution team.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>GRESLEY Unofficial Fan Site</p>
 
       <p>
-        Merch Store:
-        <a
-          href="https://gresley.printify.me/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GRESLEY Merch
-        </a>
-      </p>
-
-      <h3>Fan Community</h3>
-
-      <p>
-        FVR Fan Hub:
-        <a
-          href="https://www.fvr.fan/gresley"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Visit the GRESLEY Fan Hub
-        </a>
-      </p>
-
-      <p>
-        Discord:
-        <a
-          href="https://discord.gg/E4CUmUkh9V"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Join the GRESLEY Discord
-        </a>
-      </p>
-
-      <p>
-        Live Show Archive:
-        <a
-          href="https://www.instagram.com/gresleylive"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          @gresleylive
-        </a>
-      </p>
-
-      <p>
-        Photo Dumps:
-        <a
-          href="https://www.instagram.com/gresleydumps/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          @gresleydumps
-        </a>
+        Created by Ace
+        <span id="currentYear"></span>
       </p>
     </div>
-  </section>
-
-  <footer>
-    <p>Fan-made page about George Smith / GRESLEY</p>
-
-    <p>
-      <a href="#about">About</a> |
-      <a href="#music">Music</a> |
-      <a href="#shows">Shows</a> |
-      <a href="#links">Links</a>
-    </p>
-
-    <p>Last updated: July 23, 2026</p>
   </footer>
 
+  <button
+    class="back-to-top"
+    id="backToTop"
+    type="button"
+    aria-label="Back to top"
+  >
+    ↑
+  </button>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
