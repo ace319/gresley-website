@@ -21,7 +21,11 @@
 <body>
   <header class="site-header">
     <div class="header-inner">
-      <a href="#home" class="site-logo" aria-label="GRESLEY home">
+      <a
+        href="#home"
+        class="site-logo"
+        aria-label="GRESLEY home"
+      >
         GRESLEY
       </a>
 
@@ -47,7 +51,6 @@
         <a href="#about">About</a>
         <a href="#music">Music</a>
         <a href="#shows">Shows</a>
-        <a href="#setlist">Setlist</a>
         <a href="#stats">Stats</a>
         <a href="#merch">Merch</a>
         <a href="#video">Video</a>
@@ -58,13 +61,13 @@
 
   <main>
     <section class="hero" id="home">
-      <div class="hero-overlay"></div>
-
       <img
         class="hero-image"
         src="images/gresley-main-promo.jpg"
         alt="GRESLEY promotional portrait"
       >
+
+      <div class="hero-overlay"></div>
 
       <div class="hero-content">
         <p class="eyebrow">The unofficial fan site</p>
@@ -72,8 +75,8 @@
         <h1>GRESLEY</h1>
 
         <p class="hero-description">
-          Music, shows, statistics, photos and updates from the solo project
-          of George Smith.
+          Music, shows, statistics, photos and updates from the solo
+          project of George Smith.
         </p>
 
         <div class="hero-buttons">
@@ -86,7 +89,10 @@
             Pre-save Stunner
           </a>
 
-          <a class="button button-secondary" href="#news">
+          <a
+            class="button button-secondary"
+            href="#news"
+          >
             Latest News
           </a>
         </div>
@@ -95,7 +101,9 @@
 
     <section class="announcement-banner">
       <div class="container announcement-inner">
-        <span class="announcement-label">New single</span>
+        <span class="announcement-label">
+          New single
+        </span>
 
         <p>
           <strong>Stunner</strong> arrives August 7, 2026.
@@ -118,14 +126,15 @@
           <h2>Stunner is coming</h2>
         </div>
 
-        <div class="featured-card">
+        <article class="featured-card">
           <div class="featured-card-image">
-  <img
-    src="images/gresley-stunner-promo.jpg"
-    alt="GRESLEY Stunner single promotional image"
-    loading="lazy"
-  >
-</div>
+            <img
+              src="images/gresley-stunner-promo.jpg"
+              alt="GRESLEY Stunner promotional image"
+              loading="lazy"
+            >
+          </div>
+
           <div class="featured-card-content">
             <span class="tag">August 7, 2026</span>
 
@@ -137,8 +146,9 @@
             </p>
 
             <p>
-              The song has already appeared during recent live performances
-              and follows the release of his debut independent album,
+              The song has already appeared during recent live
+              performances and follows the release of the debut
+              independent album
               <em>Songs I Wrote Since She Left</em>.
             </p>
 
@@ -151,9 +161,9 @@
               Pre-save Stunner
             </a>
           </div>
-        </div>
+        </article>
 
-        <div class="milestone-card">
+        <article class="milestone-card">
           <div class="milestone-number">1M+</div>
 
           <div>
@@ -162,11 +172,11 @@
             <h3>More than one million streams</h3>
 
             <p>
-              <em>Songs I Wrote Since She Left</em> has surpassed one million
-              streams across all streaming platforms.
+              <em>Songs I Wrote Since She Left</em> has surpassed
+              one million streams across all streaming platforms.
             </p>
           </div>
-        </div>
+        </article>
       </div>
     </section>
 
@@ -187,20 +197,21 @@
           <h2>Who is GRESLEY?</h2>
 
           <p>
-            GRESLEY is the solo music project of George Smith. The project
-            takes its name from George’s middle name.
+            GRESLEY is the solo music project of George Smith.
+            The project takes its name from George’s middle name.
           </p>
 
           <p>
-            George was previously a member of New Hope Club. Following the
-            end of the band at the conclusion of 2024, he began releasing
-            music independently as GRESLEY.
+            George was previously a member of New Hope Club.
+            Following the end of the band at the conclusion of 2024,
+            he began releasing music independently as GRESLEY.
           </p>
 
           <p>
-            His solo work combines guitar-driven pop, rock influences and
-            personal songwriting, with live performances ranging from
-            intimate acoustic shows to full-band concerts.
+            His solo work combines guitar-driven pop, rock
+            influences and personal songwriting, with live
+            performances ranging from intimate acoustic shows
+            to full-band concerts.
           </p>
         </div>
       </div>
@@ -229,7 +240,7 @@
             <h3>Songs I Wrote Since She Left</h3>
 
             <p>
-              The debut album from GRESLEY has now surpassed one million
+              The debut album from GRESLEY has surpassed one million
               combined streams across streaming platforms.
             </p>
 
@@ -293,232 +304,297 @@
         <div class="section-heading">
           <p class="eyebrow">Live history</p>
           <h2>Shows</h2>
+
+          <p class="section-introduction">
+            Select the total-shows card to open the complete live
+            archive, every setlist and all song performance counts.
+          </p>
         </div>
 
         <div class="show-summary-grid">
-  <button
-    class="stat-card stat-card-button"
-    id="showArchiveButton"
-    type="button"
-    aria-expanded="false"
-    aria-controls="showArchive"
-  >
-    <span class="stat-number">6</span>
-    <span class="stat-label">Total shows — click to view</span>
-  </button>
+          <button
+            class="stat-card stat-card-button"
+            id="showArchiveButton"
+            type="button"
+            aria-expanded="false"
+            aria-controls="showArchive"
+          >
+            <span class="stat-number">6</span>
 
-  <article class="stat-card">
-    <span class="stat-number">5</span>
-    <span class="stat-label">Acoustic shows</span>
-  </article>
+            <span
+              class="stat-label"
+              id="showArchiveLabel"
+            >
+              Total shows — click to view
+            </span>
+          </button>
 
-  <article class="stat-card">
-    <span class="stat-number">1</span>
-    <span class="stat-label">Full-band show</span>
-  </article>
-</div>
-        <div class="show-archive" id="showArchive" hidden>
-  <div class="archive-heading">
-    <p class="eyebrow">Complete live history</p>
-    <h3>All shows and setlists</h3>
-  </div>
+          <article class="stat-card">
+            <span class="stat-number">5</span>
+            <span class="stat-label">Acoustic shows</span>
+          </article>
 
-  <details class="show-entry">
-    <summary>
-      <span>
-        April 25, 2026
-        <strong>The Palm &amp; The Pine</strong>
-      </span>
-      <span>Los Angeles, California</span>
-    </summary>
+          <article class="stat-card">
+            <span class="stat-number">1</span>
+            <span class="stat-label">Full-band show</span>
+          </article>
+        </div>
 
-    <div class="show-entry-content">
-      <p>First small live set and soft launch. Acoustic show.</p>
+        <div
+          class="show-archive"
+          id="showArchive"
+          hidden
+        >
+          <div class="archive-heading">
+            <p class="eyebrow">Complete live history</p>
+            <h3>All shows and setlists</h3>
+          </div>
 
-      <ol>
-        <li>How?</li>
-        <li>Think of You</li>
-        <li>She’s My Girl (Interlude)</li>
-        <li>Missing You Already</li>
-        <li>The Boys</li>
-        <li>Piece of Your Love</li>
-      </ol>
-    </div>
-  </details>
+          <details class="show-entry">
+            <summary>
+              <span class="show-summary-main">
+                <span class="show-entry-date">
+                  April 25, 2026
+                </span>
 
-  <details class="show-entry">
-    <summary>
-      <span>
-        May 5, 2026
-        <strong>The Castle Hotel</strong>
-      </span>
-      <span>Manchester, England</span>
-    </summary>
+                <strong>The Palm &amp; The Pine</strong>
+              </span>
 
-    <div class="show-entry-content">
-      <p>First proper UK tour show. Acoustic show.</p>
+              <span class="show-summary-location">
+                Los Angeles, California
+              </span>
+            </summary>
 
-      <ol>
-        <li>How?</li>
-        <li>Babyface</li>
-        <li>Loser</li>
-        <li>No Man Without My Woman</li>
-        <li>Think of You</li>
-        <li>Stunner</li>
-        <li>Break It</li>
-        <li>She’s My Girl (Interlude)</li>
-        <li>Remember — New Hope Club cover</li>
-        <li>Missing You Already</li>
-        <li>The Boys</li>
-        <li>Piece of Your Love</li>
-      </ol>
-    </div>
-  </details>
+            <div class="show-entry-content">
+              <p>
+                First small live set and soft launch.
+                Acoustic performance.
+              </p>
 
-  <details class="show-entry">
-    <summary>
-      <span>
-        May 7, 2026
-        <strong>Whelan’s Upstairs</strong>
-      </span>
-      <span>Dublin, Ireland</span>
-    </summary>
+              <ol>
+                <li>How?</li>
+                <li>Think of You</li>
+                <li>She’s My Girl (Interlude)</li>
+                <li>Missing You Already</li>
+                <li>The Boys</li>
+                <li>Piece of Your Love</li>
+              </ol>
+            </div>
+          </details>
 
-    <div class="show-entry-content">
-      <p>Acoustic show.</p>
+          <details class="show-entry">
+            <summary>
+              <span class="show-summary-main">
+                <span class="show-entry-date">
+                  May 5, 2026
+                </span>
 
-      <ol>
-        <li>How?</li>
-        <li>Babyface</li>
-        <li>Loser</li>
-        <li>No Man Without My Woman</li>
-        <li>Think of You</li>
-        <li>Stunner</li>
-        <li>Break It</li>
-        <li>She’s My Girl (Interlude)</li>
-        <li>Remember — New Hope Club cover</li>
-        <li>Missing You Already</li>
-        <li>Cherry Wine — Hozier cover</li>
-        <li>The Boys</li>
-        <li>Piece of Your Love</li>
-      </ol>
-    </div>
-  </details>
+                <strong>The Castle Hotel</strong>
+              </span>
 
-  <details class="show-entry">
-    <summary>
-      <span>
-        May 10, 2026
-        <strong>The Attic at The Garage</strong>
-      </span>
-      <span>Glasgow, Scotland</span>
-    </summary>
+              <span class="show-summary-location">
+                Manchester, England
+              </span>
+            </summary>
 
-    <div class="show-entry-content">
-      <p>Acoustic show.</p>
+            <div class="show-entry-content">
+              <p>
+                First proper UK tour show.
+                Acoustic performance.
+              </p>
 
-      <ol>
-        <li>How?</li>
-        <li>Babyface</li>
-        <li>Loser</li>
-        <li>No Man Without My Woman</li>
-        <li>Think of You</li>
-        <li>Stunner</li>
-        <li>Break It</li>
-        <li>She’s My Girl (Interlude)</li>
-        <li>Remember — New Hope Club cover</li>
-        <li>Missing You Already</li>
-        <li>Last Request — Paolo Nutini cover</li>
-        <li>The Boys</li>
-        <li>Piece of Your Love</li>
-      </ol>
-    </div>
-  </details>
+              <ol>
+                <li>How?</li>
+                <li>Babyface</li>
+                <li>Loser</li>
+                <li>No Man Without My Woman</li>
+                <li>Think of You</li>
+                <li>Stunner</li>
+                <li>Break It</li>
+                <li>She’s My Girl (Interlude)</li>
+                <li>Remember — New Hope Club cover</li>
+                <li>Missing You Already</li>
+                <li>The Boys</li>
+                <li>Piece of Your Love</li>
+              </ol>
+            </div>
+          </details>
 
-  <details class="show-entry">
-    <summary>
-      <span>
-        May 12, 2026
-        <strong>The Lower Third</strong>
-      </span>
-      <span>London, England</span>
-    </summary>
+          <details class="show-entry">
+            <summary>
+              <span class="show-summary-main">
+                <span class="show-entry-date">
+                  May 7, 2026
+                </span>
 
-    <div class="show-entry-content">
-      <p>Acoustic show.</p>
+                <strong>Whelan’s Upstairs</strong>
+              </span>
 
-      <ol>
-        <li>How?</li>
-        <li>Babyface</li>
-        <li>Loser</li>
-        <li>No Man Without My Woman</li>
-        <li>Think of You</li>
-        <li>Stunner</li>
-        <li>Break It</li>
-        <li>She’s My Girl (Interlude)</li>
-        <li>Remember — New Hope Club cover</li>
-        <li>Missing You Already</li>
-        <li>Wish You Were Here — Pink Floyd cover/snippet</li>
-        <li>The Boys</li>
-        <li>Piece of Your Love</li>
-      </ol>
-    </div>
-  </details>
+              <span class="show-summary-location">
+                Dublin, Ireland
+              </span>
+            </summary>
 
-  <details class="show-entry">
-    <summary>
-      <span>
-        June 12, 2026
-        <strong>El Cid</strong>
-      </span>
-      <span>Los Angeles, California · Full band</span>
-    </summary>
+            <div class="show-entry-content">
+              <p>Acoustic performance.</p>
 
-    <div class="show-entry-content">
-      <p>First full-band GRESLEY show, with special guest Tor Miller.</p>
+              <ol>
+                <li>How?</li>
+                <li>Babyface</li>
+                <li>Loser</li>
+                <li>No Man Without My Woman</li>
+                <li>Think of You</li>
+                <li>Stunner</li>
+                <li>Break It</li>
+                <li>She’s My Girl (Interlude)</li>
+                <li>Remember — New Hope Club cover</li>
+                <li>Missing You Already</li>
+                <li>Cherry Wine — Hozier cover</li>
+                <li>The Boys</li>
+                <li>Piece of Your Love</li>
+              </ol>
+            </div>
+          </details>
 
-      <ol>
-        <li>Think of You</li>
-        <li>Babyface</li>
-        <li>Loser</li>
-        <li>No Man Without My Woman</li>
-        <li>Stunner</li>
-        <li>Break It</li>
-        <li>Hey Bulldog — The Beatles cover</li>
-        <li>Remember — New Hope Club cover</li>
-        <li>Missing You Already / California</li>
-        <li>She’s My Girl (Interlude)</li>
-        <li>How?</li>
-        <li>The Boys</li>
-        <li>Piece of Your Love</li>
-      </ol>
-    </div>
-  </details>
+          <details class="show-entry">
+            <summary>
+              <span class="show-summary-main">
+                <span class="show-entry-date">
+                  May 10, 2026
+                </span>
 
-  <details class="song-statistics">
-    <summary>View all song performance statistics</summary>
+                <strong>The Attic at The Garage</strong>
+              </span>
 
-    <div class="song-stat-grid">
-      <span><strong>6</strong> How?</span>
-      <span><strong>6</strong> Think of You</span>
-      <span><strong>6</strong> Piece of Your Love</span>
-      <span><strong>6</strong> Missing You Already</span>
-      <span><strong>6</strong> The Boys</span>
-      <span><strong>6</strong> She’s My Girl (Interlude)</span>
-      <span><strong>5</strong> Babyface</span>
-      <span><strong>5</strong> Break It</span>
-      <span><strong>5</strong> Loser</span>
-      <span><strong>5</strong> No Man Without My Woman</span>
-      <span><strong>5</strong> Stunner</span>
-      <span><strong>5</strong> Remember</span>
-      <span><strong>1</strong> California</span>
-      <span><strong>1</strong> Cherry Wine</span>
-      <span><strong>1</strong> Hey Bulldog</span>
-      <span><strong>1</strong> Last Request</span>
-      <span><strong>1</strong> Wish You Were Here</span>
-    </div>
-  </details>
-</div>
+              <span class="show-summary-location">
+                Glasgow, Scotland
+              </span>
+            </summary>
+
+            <div class="show-entry-content">
+              <p>Acoustic performance.</p>
+
+              <ol>
+                <li>How?</li>
+                <li>Babyface</li>
+                <li>Loser</li>
+                <li>No Man Without My Woman</li>
+                <li>Think of You</li>
+                <li>Stunner</li>
+                <li>Break It</li>
+                <li>She’s My Girl (Interlude)</li>
+                <li>Remember — New Hope Club cover</li>
+                <li>Missing You Already</li>
+                <li>Last Request — Paolo Nutini cover</li>
+                <li>The Boys</li>
+                <li>Piece of Your Love</li>
+              </ol>
+            </div>
+          </details>
+
+          <details class="show-entry">
+            <summary>
+              <span class="show-summary-main">
+                <span class="show-entry-date">
+                  May 12, 2026
+                </span>
+
+                <strong>The Lower Third</strong>
+              </span>
+
+              <span class="show-summary-location">
+                London, England
+              </span>
+            </summary>
+
+            <div class="show-entry-content">
+              <p>Acoustic performance.</p>
+
+              <ol>
+                <li>How?</li>
+                <li>Babyface</li>
+                <li>Loser</li>
+                <li>No Man Without My Woman</li>
+                <li>Think of You</li>
+                <li>Stunner</li>
+                <li>Break It</li>
+                <li>She’s My Girl (Interlude)</li>
+                <li>Remember — New Hope Club cover</li>
+                <li>Missing You Already</li>
+                <li>Wish You Were Here — Pink Floyd cover/snippet</li>
+                <li>The Boys</li>
+                <li>Piece of Your Love</li>
+              </ol>
+            </div>
+          </details>
+
+          <details class="show-entry">
+            <summary>
+              <span class="show-summary-main">
+                <span class="show-entry-date">
+                  June 12, 2026
+                </span>
+
+                <strong>El Cid</strong>
+              </span>
+
+              <span class="show-summary-location">
+                Los Angeles, California · Full band
+              </span>
+            </summary>
+
+            <div class="show-entry-content">
+              <p>
+                First full-band GRESLEY show, with special guest
+                Tor Miller.
+              </p>
+
+              <ol>
+                <li>Think of You</li>
+                <li>Babyface</li>
+                <li>Loser</li>
+                <li>No Man Without My Woman</li>
+                <li>Stunner</li>
+                <li>Break It</li>
+                <li>Hey Bulldog — The Beatles cover</li>
+                <li>Remember — New Hope Club cover</li>
+                <li>Missing You Already / California</li>
+                <li>She’s My Girl (Interlude)</li>
+                <li>How?</li>
+                <li>The Boys</li>
+                <li>Piece of Your Love</li>
+              </ol>
+            </div>
+          </details>
+
+          <details class="song-statistics">
+            <summary>
+              View all song performance statistics
+            </summary>
+
+            <div class="song-stat-grid">
+              <span><strong>6</strong> How?</span>
+              <span><strong>6</strong> Think of You</span>
+              <span><strong>6</strong> Piece of Your Love</span>
+              <span><strong>6</strong> Missing You Already</span>
+              <span><strong>6</strong> The Boys</span>
+              <span><strong>6</strong> She’s My Girl (Interlude)</span>
+
+              <span><strong>5</strong> Babyface</span>
+              <span><strong>5</strong> Break It</span>
+              <span><strong>5</strong> Loser</span>
+              <span><strong>5</strong> No Man Without My Woman</span>
+              <span><strong>5</strong> Stunner</span>
+              <span><strong>5</strong> Remember</span>
+
+              <span><strong>1</strong> California</span>
+              <span><strong>1</strong> Cherry Wine</span>
+              <span><strong>1</strong> Hey Bulldog</span>
+              <span><strong>1</strong> Last Request</span>
+              <span><strong>1</strong> Wish You Were Here</span>
+            </div>
+          </details>
+        </div>
 
         <article class="show-feature">
           <div class="show-poster">
@@ -537,9 +613,9 @@
             <p class="show-date">June 12, 2026</p>
 
             <p>
-              GRESLEY performed his first full-band solo concert at El Cid in
-              Los Angeles, marking a major new stage in the project’s live
-              development.
+              GRESLEY performed his first full-band solo concert
+              at El Cid in Los Angeles, marking a major new stage
+              in the project’s live development.
             </p>
           </div>
         </article>
@@ -554,86 +630,7 @@
       </div>
     </section>
 
-    <section class="section" id="setlist">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">El Cid, Los Angeles</p>
-          <h2>Latest setlist</h2>
-          <p class="section-introduction">June 12, 2026</p>
-        </div>
-
-        <ol class="setlist">
-          <li>
-            <span class="song-position">01</span>
-            <span class="song-title">Think of You</span>
-          </li>
-
-          <li>
-            <span class="song-position">02</span>
-            <span class="song-title">Babyface</span>
-          </li>
-
-          <li>
-            <span class="song-position">03</span>
-            <span class="song-title">Loser</span>
-          </li>
-
-          <li>
-            <span class="song-position">04</span>
-            <span class="song-title">No Man Without My Woman</span>
-          </li>
-
-          <li class="setlist-highlight">
-            <span class="song-position">05</span>
-            <span class="song-title">Stunner</span>
-          </li>
-
-          <li>
-            <span class="song-position">06</span>
-            <span class="song-title">Break It</span>
-          </li>
-
-          <li>
-            <span class="song-position">07</span>
-            <span class="song-title">Hey Bulldog</span>
-          </li>
-
-          <li>
-            <span class="song-position">08</span>
-            <span class="song-title">Remember</span>
-          </li>
-
-          <li>
-            <span class="song-position">09</span>
-            <span class="song-title">
-              Missing You Already / California
-            </span>
-          </li>
-
-          <li>
-            <span class="song-position">10</span>
-            <span class="song-title">She’s My Girl (Interlude)</span>
-          </li>
-
-          <li>
-            <span class="song-position">11</span>
-            <span class="song-title">How?</span>
-          </li>
-
-          <li>
-            <span class="song-position">12</span>
-            <span class="song-title">The Boys</span>
-          </li>
-
-          <li>
-            <span class="song-position">13</span>
-            <span class="song-title">Piece of Your Love</span>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <section class="section section-dark" id="stats">
+    <section class="section" id="stats">
       <div class="container">
         <div class="section-heading">
           <p class="eyebrow">By the numbers</p>
@@ -642,34 +639,42 @@
 
         <div class="statistics-grid">
           <article class="statistic-panel">
-            <span class="stat-number">13</span>
-            <h3>Songs in latest set</h3>
+            <span class="stat-number">17</span>
+            <h3>Different songs performed</h3>
+
             <p>
-              Thirteen songs appeared in the first full-band GRESLEY set.
+              Seventeen different songs, covers and snippets have
+              appeared across the six known GRESLEY shows.
             </p>
           </article>
 
           <article class="statistic-panel">
             <span class="stat-number">6</span>
-            <h3>Solo shows</h3>
+            <h3>Known live shows</h3>
+
             <p>
-              Six known GRESLEY performances have taken place so far.
+              Five acoustic performances and one full-band concert
+              have taken place so far.
             </p>
           </article>
 
           <article class="statistic-panel">
-            <span class="stat-number">1</span>
-            <h3>Full-band performance</h3>
+            <span class="stat-number">6×</span>
+            <h3>Most-played total</h3>
+
             <p>
-              The June 12 El Cid show was the first concert with a full band.
+              Six core songs have appeared at all six known
+              GRESLEY performances.
             </p>
           </article>
 
           <article class="statistic-panel">
             <span class="stat-number">1M+</span>
             <h3>Album streams</h3>
+
             <p>
-              The debut album has passed one million total streams.
+              The debut album has passed one million total streams
+              across all platforms.
             </p>
           </article>
         </div>
@@ -774,7 +779,7 @@
 
         <div class="links-grid">
           <a
-            class="link-card"
+            class="link-card highlighted-link-card"
             href="https://fvr.fan/gresley/stunner"
             target="_blank"
             rel="noopener noreferrer"
@@ -871,8 +876,9 @@
         </div>
 
         <p class="disclaimer">
-          This is an unofficial fan-created website and is not affiliated with
-          GRESLEY, George Smith, his management or record distribution team.
+          This is an unofficial fan-created website and is not
+          affiliated with GRESLEY, George Smith, his management
+          or record distribution team.
         </p>
       </div>
     </section>
