@@ -624,7 +624,7 @@ button {
 }
 
 .setlist {
-  max-width: 900px;
+  max-width: 760px;
   margin: 0;
   padding: 0;
   border-top: 1px solid var(--border);
@@ -633,22 +633,23 @@ button {
 
 .setlist li {
   display: grid;
-  padding: 20px 12px;
+  padding: 13px 8px;
   border-bottom: 1px solid var(--border);
   align-items: center;
-  gap: 24px;
-  grid-template-columns: 60px 1fr;
+  gap: 14px;
+  grid-template-columns: 42px 1fr;
 }
 
 .song-position {
   color: var(--muted);
-  font-size: 0.78rem;
+  font-size: 0.68rem;
   font-weight: 800;
 }
 
 .song-title {
-  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  font-size: clamp(1rem, 2vw, 1.3rem);
   font-weight: 800;
+  line-height: 1.25;
 }
 
 .setlist-highlight {
@@ -996,12 +997,15 @@ button {
     flex-direction: column;
   }
 
-  .setlist li {
-    padding-right: 4px;
-    padding-left: 4px;
-    gap: 12px;
-    grid-template-columns: 42px 1fr;
-  }
+ .setlist li {
+  padding: 11px 4px;
+  gap: 9px;
+  grid-template-columns: 34px 1fr;
+}
+
+.song-title {
+  font-size: 0.95rem;
+}
 
   .link-card {
     min-height: 76px;
