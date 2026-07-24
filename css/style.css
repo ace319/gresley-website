@@ -737,17 +737,17 @@ button {
 
 .links-grid {
   display: grid;
-  gap: 16px;
+  gap: 12px;
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .link-card {
   display: flex;
-  min-height: 180px;
-  padding: 25px;
+  min-height: 90px;
+  padding: 18px 20px;
   border: 1px solid var(--border);
   border-radius: 6px;
-  justify-content: space-between;
+  justify-content: center;
   flex-direction: column;
   text-decoration: none;
   transition:
@@ -775,7 +775,7 @@ button {
 }
 
 .link-card strong {
-  font-size: 1.5rem;
+  font-size: 1.15rem;
 }
 
 .disclaimer {
