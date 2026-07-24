@@ -96,12 +96,12 @@ button {
 }
 
 .section-subheading {
-  margin: 70px 0 28px;
+  margin: 55px 0 22px;
 }
 
 .section-subheading h3 {
   margin: 0;
-  font-size: 2rem;
+  font-size: 1.7rem;
   text-transform: uppercase;
 }
 
@@ -719,6 +719,11 @@ button {
   font-size: 1.15rem;
 }
 
+.merch-store-button {
+  margin-top: 35px;
+  text-align: center;
+}
+
 .video-wrapper {
   position: relative;
   overflow: hidden;
@@ -733,6 +738,19 @@ button {
   height: 100%;
   border: 0;
 }
+
+.video-information {
+  margin-top: 24px;
+}
+
+.video-information h3 {
+  margin: 0 0 8px;
+  font-size: 1.8rem;
+}
+
+.video-information p {
+  margin: 0;
+  color: var(--muted-light);
 }
 
 .links-grid {
@@ -744,7 +762,7 @@ button {
 .link-card {
   display: flex;
   min-height: 90px;
-  padding: 18px 20px;
+  padding: 16px 18px;
   border: 1px solid var(--border);
   border-radius: 6px;
   justify-content: center;
@@ -763,19 +781,21 @@ button {
 }
 
 .link-card span {
+  margin-bottom: 4px;
   color: var(--muted);
-  font-size: 0.74rem;
+  font-size: 0.65rem;
   font-weight: 800;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
 .link-card:hover span {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.72);
 }
 
 .link-card strong {
-  font-size: 1.15rem;
+  font-size: 1.08rem;
+  line-height: 1.2;
 }
 
 .disclaimer {
@@ -983,6 +1003,15 @@ button {
     grid-template-columns: 42px 1fr;
   }
 
+  .link-card {
+    min-height: 76px;
+    padding: 14px 16px;
+  }
+
+  .link-card strong {
+    font-size: 1rem;
+  }
+
   .footer-inner {
     align-items: flex-start;
     flex-direction: column;
@@ -1002,22 +1031,4 @@ button {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
   }
-}
-.merch-store-button {
-  margin-top: 35px;
-  text-align: center;
-}
-
-.video-information {
-  margin-top: 24px;
-}
-
-.video-information h3 {
-  margin: 0 0 8px;
-  font-size: 1.8rem;
-}
-
-.video-information p {
-  margin: 0;
-  color: var(--muted-light);
 }
