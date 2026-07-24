@@ -1,5 +1,24 @@
 "use strict";
 
+if ("scrollRestoration" in history) {
+  history.scrollRestoration = "manual";
+}
+
+window.addEventListener("load", () => {
+  const cleanUrl =
+    `${window.location.pathname}${window.location.search}`;
+
+  if (window.location.hash) {
+    history.replaceState(null, "", cleanUrl);
+  }
+
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "auto"
+  });
+});
+
 document.addEventListener("DOMContentLoaded", () => {
   const menuButton =
     document.getElementById("menuButton");
