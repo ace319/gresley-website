@@ -873,10 +873,33 @@ button {
   transform: scale(1.035);
 }
 
+.merch-card-content {
+  padding: 20px;
+}
+
 .merch-card h3 {
   margin: 0;
-  padding: 24px;
-  font-size: 1.15rem;
+  font-size: 1.05rem;
+}
+
+.merch-price {
+  margin: 5px 0 12px;
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.merch-link {
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.merch-link:hover {
+  text-decoration: underline;
 }
 
 .merch-store-button {
