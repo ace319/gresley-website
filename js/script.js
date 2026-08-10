@@ -20,6 +20,124 @@ window.addEventListener("load", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+  const scrollHero = document.querySelector(".scroll-hero");
+  const openingVideo = document.getElementById("openingVideo");
+  const soundToggle = document.getElementById("soundToggle");
+  const soundToggleLabel = document.getElementById("soundToggleLabel");
+  let heroProgress = 0;
+  let heroExpanded = false;
+  let touchStartY = 0;
+  let soundIsOn = false;
+
+  function sendVideoCommand(command, args = []) {
+    if (!openingVideo || !openingVideo.contentWindow) {
+      return;
+    }
+
+    openingVideo.contentWindow.postMessage(JSON.stringify({
+      event: "command",
+      func: command,
+      args
+    }), "*");
+  }
+
+  function updateVideoVolume() {
+    if (!soundIsOn || !scrollHero) {
+      return;
+    }
+
+    const heroHeight = Math.max(scrollHero.offsetHeight, 1);
+    const scrollFade = Math.max(0, 1 - (window.scrollY / (heroHeight * 2.5)));
+    const pageFade = 0.15 + (scrollFade * 0.85);
+    const expansionLevel = 0.12 + (heroProgress * 0.88);
+    const volume = Math.round(100 * expansionLevel * pageFade);
+
+    sendVideoCommand("setVolume", [volume]);
+  }
+
+  if (soundToggle) {
+    soundToggle.addEventListener("click", () => {
+      soundIsOn = !soundIsOn;
+      sendVideoCommand(soundIsOn ? "unMute" : "mute");
+      sendVideoCommand("playVideo");
+      updateVideoVolume();
+      soundToggle.setAttribute("aria-pressed", String(soundIsOn));
+      soundToggle.setAttribute(
+        "aria-label",
+        soundIsOn ? "Turn video sound off" : "Turn video sound on"
+      );
+
+      if (soundToggleLabel) {
+        soundToggleLabel.textContent = soundIsOn ? "Sound off" : "Sound on";
+      }
+    });
+  }
+
+  function renderHero() {
+    if (!scrollHero) {
+      return;
+    }
+
+    scrollHero.style.setProperty("--hero-progress", heroProgress.toFixed(3));
+    scrollHero.classList.toggle("is-expanded", heroExpanded);
+    updateVideoVolume();
+  }
+
+  function updateHero(delta) {
+    heroProgress = Math.min(Math.max(heroProgress + delta, 0), 1);
+    heroExpanded = heroProgress >= 1;
+    renderHero();
+  }
+
+  if (scrollHero) {
+    window.addEventListener("wheel", (event) => {
+      const returningToHero = heroExpanded && event.deltaY < 0 && window.scrollY <= 5;
+
+      if (returningToHero) {
+        heroExpanded = false;
+      }
+
+      if (!heroExpanded) {
+        event.preventDefault();
+        window.scrollTo(0, 0);
+        updateHero(event.deltaY * 0.00115);
+      }
+    }, { passive: false });
+
+    window.addEventListener("touchstart", (event) => {
+      touchStartY = event.touches[0].clientY;
+    }, { passive: true });
+
+    window.addEventListener("touchmove", (event) => {
+      if (!touchStartY) {
+        return;
+      }
+
+      const touchY = event.touches[0].clientY;
+      const deltaY = touchStartY - touchY;
+      const returningToHero = heroExpanded && deltaY < -20 && window.scrollY <= 5;
+
+      if (returningToHero) {
+        heroExpanded = false;
+      }
+
+      if (!heroExpanded) {
+        event.preventDefault();
+        window.scrollTo(0, 0);
+        updateHero(deltaY * 0.006);
+        touchStartY = touchY;
+      }
+    }, { passive: false });
+
+    window.addEventListener("touchend", () => {
+      touchStartY = 0;
+    }, { passive: true });
+
+    window.addEventListener("scroll", updateVideoVolume, { passive: true });
+
+    renderHero();
+  }
+
   const menuButton =
     document.getElementById("menuButton");
 
