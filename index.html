@@ -60,41 +60,48 @@
   </header>
 
   <main>
-    <section class="hero" id="home">
-      <img
-        class="hero-image"
-        src="images/gresley-main-promo.jpg"
-        alt="GRESLEY promotional portrait"
-      >
+    <section class="scroll-hero" id="home" aria-label="GRESLEY opening video">
+      <div class="scroll-hero-background" aria-hidden="true"></div>
+      <div class="scroll-hero-shade" aria-hidden="true"></div>
 
-      <div class="hero-overlay"></div>
+      <div class="scroll-hero-stage">
+        <p class="scroll-hero-kicker">The unofficial fan site</p>
 
-      <div class="hero-content">
-        <p class="eyebrow">The unofficial fan site</p>
+        <div class="scroll-hero-title" aria-hidden="true">
+          <span class="scroll-hero-title-left">GRES</span>
+          <span class="scroll-hero-title-right">LEY</span>
+        </div>
 
-        <h1>GRESLEY</h1>
+        <div class="scroll-hero-media">
+          <iframe
+            id="openingVideo"
+            src="https://www.youtube.com/embed/A0EHuEN1K4Q?autoplay=1&mute=1&loop=1&controls=0&rel=0&disablekb=1&modestbranding=1&playsinline=1&playlist=A0EHuEN1K4Q&enablejsapi=1"
+            title="GRESLEY opening video"
+            allow="autoplay; encrypted-media; picture-in-picture"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+          <div class="scroll-hero-media-shade" aria-hidden="true"></div>
+        </div>
 
-        <p class="hero-description">
-          Music, shows, statistics, photos and updates from the solo
-          project of George Smith.
-        </p>
+        <button
+          class="sound-toggle"
+          id="soundToggle"
+          type="button"
+          aria-pressed="false"
+          aria-label="Turn video sound on"
+        >
+          <span class="sound-toggle-icon" aria-hidden="true">♪</span>
+          <span id="soundToggleLabel">Sound on</span>
+        </button>
 
-        <div class="hero-buttons">
-         <a
-  class="button button-primary"
-  href="https://youtu.be/Mq2ry1-Jrws"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  Watch Stunner
-</a>
+        <div class="scroll-hero-meta" aria-hidden="true">
+          <span>George Smith</span>
+          <span>Scroll to expand</span>
+        </div>
 
-          <a
-            class="button button-secondary"
-            href="#news"
-          >
-            Latest News
-          </a>
+        <div class="scroll-hero-cue" aria-hidden="true">
+          <span></span>
         </div>
       </div>
     </section>
@@ -654,177 +661,148 @@
   </div>
 </section>
 
-   <section class="section" id="merch">
-  <div class="container">
-    <div class="section-heading">
-      <p class="eyebrow">Official items</p>
-      <h2>Merchandise</h2>
-
-      <p class="section-introduction">
-        Official GRESLEY merchandise available from the online store.
-      </p>
-    </div>
-
-    <div class="merch-grid">
-
-      <article class="merch-card">
-        <div class="merch-image-wrap">
-          <img
-            src="images/good-for-each-other-tee.jpg"
-            alt="GRESLEY Good For Each Other Tee"
-            loading="lazy"
-          >
+    <section class="section" id="merch">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Official items</p>
+          <h2>Merchandise</h2>
+          <p class="section-introduction">
+            New arrivals and fan favourites from the official GRESLEY store.
+            Worldwide and UK-specific options are available on selected items.
+          </p>
         </div>
 
-        <div class="merch-card-content">
-          <h3>Good For Each Other Tee</h3>
-          <p class="merch-price">$25</p>
-
+        <div class="merch-grid">
           <a
-            class="merch-link"
+            class="merch-card merch-card-new"
             href="https://gresley.printify.me/product/30826851"
             target="_blank"
             rel="noopener noreferrer"
           >
-            View item →
+            <div class="merch-image-wrap">
+              <img
+                src="images/good-for-each-other-tee.jpg"
+                alt="Yellow Good For Each Other GRESLEY T-shirt"
+                loading="lazy"
+              >
+              <span class="merch-badge">New</span>
+            </div>
+
+            <div class="merch-card-details">
+              <div>
+                <h3>Good For Each Other Tee</h3>
+                <p>Worldwide shipping</p>
+              </div>
+              <strong>$25</strong>
+            </div>
           </a>
-        </div>
-      </article>
-
-      <article class="merch-card">
-        <div class="merch-image-wrap">
-          <img
-            src="images/album-hoodie.jpg"
-            alt="GRESLEY Album Hoodie"
-            loading="lazy"
-          >
-        </div>
-
-        <div class="merch-card-content">
-          <h3>Album Hoodie</h3>
-          <p class="merch-price">$50</p>
 
           <a
-            class="merch-link"
-            href="https://gresley.printify.me/product/27946071"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            View item →
-          </a>
-        </div>
-      </article>
-
-      <article class="merch-card">
-        <div class="merch-image-wrap">
-          <img
-            src="images/gresley-black-denim-cap.jpg"
-            alt="GRESLEY Black Denim Cap"
-            loading="lazy"
-          >
-        </div>
-
-        <div class="merch-card-content">
-          <h3>GRESLEY Black Denim Cap</h3>
-          <p class="merch-price">$30</p>
-
-          <a
-            class="merch-link"
+            class="merch-card merch-card-new"
             href="https://gresley.printify.me/product/30826366"
             target="_blank"
             rel="noopener noreferrer"
           >
-            View item →
+            <div class="merch-image-wrap">
+              <img
+                src="images/gresley-black-denim-cap.jpg"
+                alt="Black GRESLEY denim cap"
+                loading="lazy"
+              >
+              <span class="merch-badge">New</span>
+            </div>
+
+            <div class="merch-card-details">
+              <div>
+                <h3>Black Denim Cap</h3>
+                <p>Worldwide shipping</p>
+              </div>
+              <strong>$30</strong>
+            </div>
           </a>
-        </div>
-      </article>
-
-      <article class="merch-card">
-        <div class="merch-image-wrap">
-          <img
-            src="images/gresley-tee.jpg"
-            alt="GRESLEY Tee"
-            loading="lazy"
-          >
-        </div>
-
-        <div class="merch-card-content">
-          <h3>GRESLEY Tee</h3>
-          <p class="merch-price">$25</p>
 
           <a
-            class="merch-link"
+            class="merch-card merch-card-new"
+            href="https://gresley.printify.me/product/27946071"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="merch-image-wrap">
+              <img
+                src="images/album-hoodie.jpg"
+                alt="Sand GRESLEY album hoodie"
+                loading="lazy"
+              >
+              <span class="merch-badge">New</span>
+            </div>
+
+            <div class="merch-card-details">
+              <div>
+                <h3>Album Hoodie</h3>
+                <p>Sand · S–3XL</p>
+              </div>
+              <strong>$50</strong>
+            </div>
+          </a>
+
+          <a
+            class="merch-card"
             href="https://gresley.printify.me/product/26905851"
             target="_blank"
             rel="noopener noreferrer"
           >
-            View item →
+            <div class="merch-image-wrap">
+              <img src="images/gresley-tee.jpg" alt="White GRESLEY T-shirt" loading="lazy">
+            </div>
+            <div class="merch-card-details">
+              <div><h3>GRESLEY Tee</h3><p>Worldwide shipping</p></div>
+              <strong>$25</strong>
+            </div>
           </a>
-        </div>
-      </article>
-
-      <article class="merch-card">
-        <div class="merch-image-wrap">
-          <img
-            src="images/gresley-denim-cap.jpg"
-            alt="GRESLEY Denim Cap"
-            loading="lazy"
-          >
-        </div>
-
-        <div class="merch-card-content">
-          <h3>GRESLEY Denim Cap</h3>
-          <p class="merch-price">$30</p>
 
           <a
-            class="merch-link"
+            class="merch-card"
             href="https://gresley.printify.me/product/26466807"
             target="_blank"
             rel="noopener noreferrer"
           >
-            View item →
+            <div class="merch-image-wrap">
+              <img src="images/gresley-denim-cap.jpg" alt="Blue GRESLEY denim cap" loading="lazy">
+            </div>
+            <div class="merch-card-details">
+              <div><h3>Blue Denim Cap</h3><p>Worldwide shipping</p></div>
+              <strong>$30</strong>
+            </div>
           </a>
-        </div>
-      </article>
-
-      <article class="merch-card">
-        <div class="merch-image-wrap">
-          <img
-            src="images/gresley-tote-bag.jpg"
-            alt="GRESLEY Tote Bag"
-            loading="lazy"
-          >
-        </div>
-
-        <div class="merch-card-content">
-          <h3>GRESLEY Tote Bag</h3>
-          <p class="merch-price">$20</p>
 
           <a
-            class="merch-link"
+            class="merch-card"
             href="https://gresley.printify.me/product/24033378"
             target="_blank"
             rel="noopener noreferrer"
           >
-            View item →
+            <div class="merch-image-wrap">
+              <img src="images/gresley-tote-bag.jpg" alt="Natural GRESLEY tote bag" loading="lazy">
+            </div>
+            <div class="merch-card-details">
+              <div><h3>Natural Tote</h3><p>Worldwide shipping</p></div>
+              <strong>$20</strong>
+            </div>
           </a>
         </div>
-      </article>
 
-    </div>
-
-    <div class="merch-store-button">
-      <a
-        class="button button-primary"
-        href="https://gresley.printify.me/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        View Full Merch Store
-      </a>
-    </div>
-  </div>
-</section>
+        <div class="merch-store-button">
+          <a
+            class="button button-primary"
+            href="https://gresley.printify.me/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Shop All Official Merch
+          </a>
+        </div>
+      </div>
+    </section>
 
     <section class="section section-dark" id="video">
   <div class="container">
