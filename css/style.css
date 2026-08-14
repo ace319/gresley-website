@@ -13,6 +13,7 @@
   --border-light: rgba(255, 255, 255, 0.16);
   --shadow: 0 18px 50px rgba(0, 0, 0, 0.14);
   --maximum-width: 1180px;
+  --radius: 10px;
 }
 
 * {
@@ -28,7 +29,7 @@ body {
   margin: 0;
   background: var(--background);
   color: var(--text);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
   line-height: 1.6;
 }
 
@@ -84,6 +85,8 @@ button {
   line-height: 0.95;
   letter-spacing: -0.05em;
   text-transform: uppercase;
+  font-family: "Archivo Black", "Arial Black", sans-serif;
+  font-weight: 400;
 }
 
 .section-introduction {
@@ -194,8 +197,9 @@ button {
 }
 
 .site-logo {
+  font-family: "Archivo Black", "Arial Black", sans-serif;
   font-size: 1.35rem;
-  font-weight: 900;
+  font-weight: 400;
   letter-spacing: 0.2em;
   text-decoration: none;
 }
@@ -258,7 +262,7 @@ button {
 }
 
 .scroll-hero-background {
-  background-image: url("../images/gresley-main-promo-wide.png");
+  background-image: url("../images/gresley-main-promo-wide.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -345,6 +349,29 @@ button {
   background: var(--accent);
 }
 
+.skip-intro {
+  position: absolute;
+  z-index: 8;
+  top: 151px;
+  right: 5vw;
+  padding: 8px 4px;
+  border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.55);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.skip-intro:hover,
+.skip-intro:focus-visible {
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
 .scroll-hero-title {
   position: absolute;
   z-index: 3;
@@ -353,10 +380,12 @@ button {
   display: flex;
   width: min(92vw, 1180px);
   justify-content: center;
-  font-size: clamp(4.4rem, 15vw, 11rem);
-  font-weight: 900;
-  line-height: 0.8;
-  letter-spacing: -0.075em;
+  font-size: clamp(4.8rem, 14vw, 10.5rem);
+  font-family: "Bodoni Moda", Didot, "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 0.82;
+  letter-spacing: -0.045em;
   pointer-events: none;
   transform: translate(-50%, -50%);
 }
@@ -367,10 +396,12 @@ button {
 }
 
 .scroll-hero-title-left {
+  padding-right: 0.035em;
   transform: translateX(calc(var(--hero-progress) * -65vw));
 }
 
 .scroll-hero-title-right {
+  padding-left: 0.035em;
   transform: translateX(calc(var(--hero-progress) * 65vw));
 }
 
@@ -465,6 +496,11 @@ button {
     right: 18px;
   }
 
+  .skip-intro {
+    top: 140px;
+    right: 18px;
+  }
+
   .scroll-hero-cue {
     display: none;
   }
@@ -511,7 +547,7 @@ button {
 .featured-card {
   display: grid;
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: var(--radius);
   background: var(--surface);
   box-shadow: var(--shadow);
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -539,6 +575,8 @@ button {
   font-size: clamp(2rem, 4vw, 3.7rem);
   line-height: 1;
   letter-spacing: -0.04em;
+  font-family: "Archivo Black", "Arial Black", sans-serif;
+  font-weight: 400;
 }
 
 .featured-card-content p {
@@ -620,6 +658,8 @@ button {
   font-size: clamp(2.3rem, 5vw, 4.4rem);
   line-height: 0.98;
   letter-spacing: -0.05em;
+  font-family: "Archivo Black", "Arial Black", sans-serif;
+  font-weight: 400;
 }
 
 .album-information p {
@@ -920,7 +960,7 @@ button {
 .show-feature {
   display: grid;
   overflow: hidden;
-  border-radius: 7px;
+  border-radius: var(--radius);
   background: var(--surface-dark);
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
 }
@@ -943,6 +983,8 @@ button {
   font-size: clamp(2.5rem, 6vw, 5rem);
   line-height: 0.92;
   letter-spacing: -0.06em;
+  font-family: "Archivo Black", "Arial Black", sans-serif;
+  font-weight: 400;
 }
 
 .show-date {
@@ -1024,7 +1066,7 @@ button {
 .merch-card {
   overflow: hidden;
   border: 1px solid var(--border);
-  border-radius: 6px;
+  border-radius: var(--radius);
   background: var(--surface);
   color: inherit;
   text-decoration: none;
@@ -1106,7 +1148,7 @@ button {
   overflow: hidden;
   width: 100%;
   aspect-ratio: 16 / 9;
-  border-radius: 7px;
+  border-radius: var(--radius);
   background: #000000;
 }
 
@@ -1137,7 +1179,7 @@ button {
 }
 
 .official-links-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
 }
 
 .link-card {
@@ -1145,7 +1187,7 @@ button {
   min-height: 90px;
   padding: 16px 18px;
   border: 1px solid var(--border);
-  border-radius: 6px;
+  border-radius: var(--radius);
   justify-content: center;
   flex-direction: column;
   text-decoration: none;
@@ -1323,88 +1365,6 @@ button {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .song-stat-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .show-poster img {
-    min-height: auto;
-  }
-}
-
-@media (max-width: 950px) {
-  .menu-button {
-    display: block;
-  }
-
-  .main-navigation {
-    position: fixed;
-    top: 72px;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    padding: 45px 30px;
-    background: rgba(15, 15, 15, 0.98);
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
-    gap: 25px;
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(-12px);
-    transition:
-      opacity 180ms ease,
-      transform 180ms ease;
-  }
-
-  .main-navigation.open {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateY(0);
-  }
-
-  .main-navigation a {
-    font-size: 1rem;
-  }
-
-  .menu-button.active span:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-
-  .menu-button.active span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .menu-button.active span:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
-
-  .featured-card,
-  .about-grid,
-  .album-feature,
-  .show-feature {
-    grid-template-columns: 1fr;
-  }
-
-  .featured-card-image {
-    min-height: auto;
-  }
-
-  .featured-card-image img {
-    max-height: 700px;
-    object-position: top;
-  }
-
-  .about-image {
-    min-height: auto;
-  }
-
-  .music-grid,
-  .links-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .show-summary-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -1431,7 +1391,9 @@ button {
 }
 
 @media (max-width: 620px) {
-  .merch-grid {
+  .music-grid,
+  .merch-grid,
+  .links-grid {
     grid-template-columns: 1fr;
   }
 }

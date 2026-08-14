@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const openingVideo = document.getElementById("openingVideo");
   const soundToggle = document.getElementById("soundToggle");
   const soundToggleLabel = document.getElementById("soundToggleLabel");
+  const skipIntro = document.getElementById("skipIntro");
   let heroProgress = 0;
   let heroExpanded = false;
   let touchStartY = 0;
@@ -90,6 +91,19 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   if (scrollHero) {
+    if (skipIntro) {
+      skipIntro.addEventListener("click", () => {
+        heroProgress = 1;
+        heroExpanded = true;
+        renderHero();
+
+        document.getElementById("news")?.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      });
+    }
+
     window.addEventListener("wheel", (event) => {
       const returningToHero = heroExpanded && event.deltaY < 0 && window.scrollY <= 5;
 

@@ -18,6 +18,13 @@
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg?v=3">
   <link rel="alternate icon" href="images/favicon.svg?v=3">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bodoni+Moda:ital,opsz,wght@1,6..96,600&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -50,14 +57,12 @@
         id="mainNavigation"
         aria-label="Main navigation"
       >
-        <a href="#news">News</a>
+        <a href="#news">Latest</a>
         <a href="#about">About</a>
         <a href="#music">Music</a>
-        <a href="#shows">Shows</a>
-        <a href="#stats">Stats</a>
-        <a href="#merch">Merch</a>
-        <a href="#video">Video</a>
-        <a href="#links">Links</a>
+        <a href="#shows">Live</a>
+        <a href="#merch">Shop</a>
+        <a href="#links">Connect</a>
       </nav>
     </div>
   </header>
@@ -96,6 +101,10 @@
         >
           <span class="sound-toggle-icon" aria-hidden="true">♪</span>
           <span id="soundToggleLabel">Sound on</span>
+        </button>
+
+        <button class="skip-intro" id="skipIntro" type="button">
+          Skip intro
         </button>
 
         <div class="scroll-hero-meta" aria-hidden="true">
@@ -292,19 +301,11 @@
             <p>Released March 27, 2026</p>
           </article>
 
-          <article class="music-card highlighted-card">
-  <span class="music-number">04</span>
-  <h4>Stunner</h4>
-  <p>Released August 7, 2026</p>
-
-  <a
-    href="https://youtu.be/Mq2ry1-Jrws"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    Watch video
-  </a>
-</article>
+          <article class="music-card">
+            <span class="music-number">04</span>
+            <h4>Stunner</h4>
+            <p>Released August 7, 2026</p>
+          </article>
         </div>
       </div>
     </section>
@@ -818,6 +819,7 @@
       <iframe
         src="https://www.youtube.com/embed/Mq2ry1-Jrws"
         title="GRESLEY - Stunner Official Music Video"
+        loading="lazy"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen
       ></iframe>
@@ -847,16 +849,6 @@
         </div>
 
         <div class="links-grid official-links-grid">
-          <a
-  class="link-card highlighted-link-card"
-  href="https://youtu.be/Mq2ry1-Jrws"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <span>Watch now</span>
-  <strong>Stunner</strong>
-</a>
-
           <a
             class="link-card"
             href="https://www.instagram.com/gresley"
