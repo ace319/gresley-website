@@ -1136,6 +1136,10 @@ button {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.official-links-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .link-card {
   display: flex;
   min-height: 90px;
