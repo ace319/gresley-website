@@ -19,7 +19,7 @@ window.addEventListener("load", () => {
   });
 });
 
-document.addEventListener("DOMContentLoaded", () => {
+function initializeSite() {
   const scrollHero = document.querySelector(".scroll-hero");
   const openingVideo = document.getElementById("openingVideo");
   const soundToggle = document.getElementById("soundToggle");
@@ -303,4 +303,10 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
-});
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initializeSite);
+} else {
+  initializeSite();
+}
