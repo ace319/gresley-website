@@ -224,6 +224,19 @@ button {
   color: #ffffff;
 }
 
+.main-navigation a[aria-current="page"] {
+  color: #ffffff;
+}
+
+.main-navigation a[aria-current="page"]::after {
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-top: 5px;
+  background: var(--accent);
+  content: "";
+}
+
 .menu-button {
   display: none;
   width: 44px;
@@ -515,6 +528,106 @@ button {
 .announcement-banner {
   background: var(--accent);
   color: #ffffff;
+}
+
+.home-page #music,
+.home-page #shows,
+.home-page #stats,
+.home-page #merch,
+.home-page #video,
+.home-page #links {
+  display: none;
+}
+
+.home-directory {
+  background: #e9e5de;
+}
+
+.directory-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.directory-card {
+  display: flex;
+  min-height: 245px;
+  padding: 26px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: inherit;
+  flex-direction: column;
+  text-decoration: none;
+  transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.directory-card > span {
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.directory-card strong {
+  margin-top: auto;
+  font-family: "Archivo Black", "Arial Black", sans-serif;
+  font-size: clamp(1.6rem, 3vw, 2.5rem);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.directory-card p {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.directory-card:hover {
+  background: var(--accent);
+  color: #ffffff;
+  transform: translateY(-4px);
+}
+
+.directory-card:hover > span,
+.directory-card:hover p {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.page-banner {
+  padding: 155px 0 78px;
+  background: var(--background-dark);
+  color: var(--text-light);
+}
+
+.page-banner h1 {
+  margin: 0;
+  font-family: "Bodoni Moda", Didot, "Times New Roman", serif;
+  font-size: clamp(4.8rem, 14vw, 10rem);
+  font-style: italic;
+  font-weight: 600;
+  line-height: 0.78;
+  letter-spacing: -0.05em;
+}
+
+.inner-page #pageContent[aria-busy="true"] {
+  min-height: 48vh;
+  background: linear-gradient(100deg, #e7e3dc 30%, #f4f1eb 50%, #e7e3dc 70%);
+  background-size: 200% 100%;
+  animation: page-loading 1.4s linear infinite;
+}
+
+.inner-page #pageContent > .section:first-child > .container > .section-heading .eyebrow,
+.inner-page #pageContent > .section:first-child > .container > .section-heading h2 {
+  display: none;
+}
+
+.inner-page #pageContent > .section:first-child > .container > .section-heading {
+  margin-bottom: 36px;
+}
+
+@keyframes page-loading {
+  to { background-position: -200% 0; }
 }
 
 .announcement-inner {
@@ -1365,6 +1478,10 @@ button {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .directory-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .show-summary-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -1395,5 +1512,17 @@ button {
   .merch-grid,
   .links-grid {
     grid-template-columns: 1fr;
+  }
+
+  .directory-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .directory-card {
+    min-height: 190px;
+  }
+
+  .page-banner {
+    padding: 130px 0 58px;
   }
 }
