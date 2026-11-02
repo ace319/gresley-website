@@ -701,6 +701,68 @@ button {
   margin-top: 14px;
 }
 
+.latest-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.latest-grid .featured-card {
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto 1fr;
+}
+
+.latest-grid .featured-card-image {
+  display: block;
+  min-height: 0;
+  height: clamp(320px, 36vw, 500px);
+  background: #101010;
+}
+
+.latest-grid .latest-poster img {
+  object-fit: contain;
+}
+
+.latest-grid .featured-card-content {
+  padding: clamp(24px, 3vw, 40px);
+  justify-content: flex-start;
+}
+
+.latest-grid .featured-card-content h3 {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+}
+
+.show-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.upcoming-show {
+  margin-bottom: 60px;
+  align-items: center;
+}
+
+.upcoming-show .show-poster img {
+  min-height: 0;
+  height: auto;
+  width: 100%;
+}
+
+@media (max-width: 760px) {
+  .latest-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .latest-grid .featured-card-image {
+    height: auto;
+  }
+
+  .latest-grid .featured-card-image img {
+    height: auto;
+  }
+}
+
 .milestone-card {
   display: grid;
   margin-top: 28px;
