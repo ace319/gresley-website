@@ -1084,6 +1084,18 @@ button {
   border-top: 1px solid var(--border-light);
 }
 
+.archive-poster {
+  display: block;
+  max-width: 460px;
+  margin: 24px auto 0;
+}
+
+.archive-poster img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
 .show-entry-content p {
   margin-top: 0;
   color: var(--muted-light);
